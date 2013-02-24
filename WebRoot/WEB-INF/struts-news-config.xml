@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans></form-beans>
+	<action-mappings>
+		<!--	News action-->
+		<action path="/news"
+			type="org.net9.news.web.struts.action.NewsAction" scope="request"
+			parameter="method" unknown="false" validate="true">
+			<forward name="news.indexPage" path="/news/indexPage.jsp"
+				redirect="false">
+			</forward>
+			<forward name="news.search" path="/news/search.jsp"
+				redirect="false">
+			</forward>
+			<forward name="news.post" path="/news/newsForm.jsp"
+				redirect="false">
+			</forward>
+			<forward name="news.view" path="/news/view.jsp"
+				redirect="false">
+			</forward>
+			<forward name="news.list" path="/news/list.jsp"
+				redirect="false">
+			</forward>
+			<forward name="news.cat.list" path="/news/catList.jsp"
+				redirect="false">
+			</forward>
+		</action>
+	</action-mappings>
+</struts-config>
+

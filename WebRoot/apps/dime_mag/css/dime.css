@@ -1,0 +1,408 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: #555;
+	font: 12px Arial,sans-serif
+}
+a {
+	color: #555;
+	text-decoration: none
+}
+a:hover {
+	text-decoration: underline
+}
+.redlink a {
+	color: #e21d1b
+}
+.font_small {
+	font-size: 10px
+}
+.color_red {
+	color: #e21d1b
+}
+.color_gray {
+	color: #999
+}
+.brown_bg {
+	background: #b7865b
+}
+.right {
+	text-align: right
+}
+h1, h2, h3, h4 {
+	margin: 0;
+	padding: 0
+}
+h2 {
+	font-size: 16px;
+	margin: 6px 0 0;
+	text-decoration: none;
+	text-transform: uppercase
+}
+h2 a {
+	color: #333
+}
+h3 {
+	color: #333;
+	margin: 0;
+	padding: 5px 0 1px 0;
+	*padding: 7px 0 0;
+	font-size: 13px;
+	font-weight: bold;
+	text-transform: uppercase;
+	background: url(../img/dot.gif) repeat-x left top;
+}
+.fleft {
+	float: left
+}
+.fright {
+	float: right
+}
+.clearfix {
+	zoom: 1;
+	overflow: auto;
+	clear: both
+}
+form, input {
+	margin: 0;
+	padding: 0;
+	font: 12px Tahoma, Geneva, sans-serif
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none
+}
+img {
+	border: 0
+}
+#wrapper, #bottom {
+	width: 900px;
+	margin: 0 auto;
+	padding: 16px;
+	background: #fff;
+	border-left: 2px solid #ddd;
+	border-right: 2px solid #ddd
+}
+#bottom {
+	padding: 5px 16px
+}
+#header {
+}
+#top_ad {
+}
+#logo h1 {
+	height: 90px!important;
+	height: 98px;
+	width: 249px
+}
+#logo h1 a {
+	color: #fff;
+	display: block;
+	height: 84px;
+	width: 249px;
+	margin: 8px 0 0;
+	padding: 0 0 0;
+	text-align: center;
+	text-decoration: none;
+	text-indent: -9999px;
+	background: #eee url(../img/dimemag.png)
+}
+.quote {
+	color: #999;
+	font-weight: bold;
+	line-height: 19px;
+	margin: 20px 0 0;
+	width: 625px;
+}
+#nav li {
+	float: left;
+	display: inline;
+	color: #e21d1b;
+	font-size: 13px;
+	margin: 0 1px 0 0;
+	padding: 0 0 0 5px;
+	text-align: right
+}
+#nav li a {
+	color: #e21d1b;
+	font-weight: bold
+}
+#nav li a:hover {
+	color: #fff;
+	background: #e21d1b;
+	text-decoration: none
+}
+#searchbar {
+	padding: 5px 0;
+	*padding: 5px 0 3px 0;
+	border-top: 2px solid #555;
+	border-bottom: 2px solid #555
+}
+ul#feeds li a {
+	color: #e21d1b;
+	text-decoration: underline
+}
+ul#feeds li a:hover {
+	text-decoration: none
+}
+#searchbar #searchform {
+	height: 19px;
+	width: 255px
+}
+#searchform #title {
+	float: left;
+	height: 17px;
+	width: 227px;
+	border: 1px solid #666
+}
+#content {
+	margin: 20px 0 0
+}
+#news {
+	width: 488px;
+	background: url(../img/dot.gif) repeat-x left top
+}
+.post {
+	margin: 0;
+	padding: 5px 0 20px;
+	background: url(../img/dot.gif) repeat-x left top
+}
+.info {
+	color: #7f7f7f;
+	font-size: 11px;
+	letter-spacing: 1px;
+	margin: 10px 0;
+	padding: 1px 15px 0 15px;
+	text-transform: uppercase
+}
+.post .info {
+	background: url(../img/smack.gif) no-repeat 0 2px
+}
+.post .info a {
+	color: #7f7f7f;
+	font-weight: bold
+}
+.info .date {
+	font-size: 1em
+}
+.byline {
+	font-size: 11px;
+	margin: 5px 0 0 1px;
+	text-transform: uppercase
+}
+.postmetadata {
+	color: #888;
+	margin: 8px 0;
+	text-transform: uppercase
+}
+a.stbutton {
+	padding: 1px 5px 5px 20px
+}
+.stico_default {
+	background: url(../img/share-icon-16x16.png) no-repeat
+}
+#sidebar {
+	width: 202px;
+	margin: 0 0 20px 10px;
+	padding: 0 0 0 15px;
+	background: url(../img/dot.gif) repeat-y left top
+}
+#adbar {
+	margin: 0 0 0 10px;
+	padding: 0 0 0 12px;
+	background: url(../img/dot.gif) repeat-y left top
+}
+#currentissue h3 {
+	margin-top: 0;
+	padding-bottom: 3px
+}
+#currentissue p {
+	margin: 6px 0 15px 0
+}
+#currentissue a:link {
+	background: #999;
+	display: block;
+	margin-top: 0;
+	width: 200px;
+	height: 273px
+}
+.entry {
+	font-size: 13px;
+	margin: 10px 0 0 0;
+	line-height: 20px
+}
+.entry img {
+	margin: 10px
+}
+ul.digglist {
+	margin: 6px 0 16px 0
+}
+ul.digglist li {
+	height: 34px;
+	padding: 4px 0;
+	*padding: 3px 0 6px 0;
+	border-bottom: 1px dotted #ddd
+}
+ul.digglist li.last {
+	border: 0
+}
+.diggmini {
+	width: 36px;
+	height: 34px;
+	color: #93883f;
+	line-height: 34px;
+	text-align: center;
+	background: url(../img/diggmini.gif) no-repeat
+}
+.digglt2 {
+	height: 34px;
+	width: 161px;
+	line-height: 18px;
+	overflow: hidden;
+	padding: 0 0 0 5px
+}
+ul.pix_show {
+	margin: 8px 0
+}
+ul.pix_show li {
+	display: inline;
+	width: 95px;
+	margin: 0 0 10px 0
+}
+#vote {
+	color: #fff;
+	padding: 10px;
+	margin: 10px 0 20px 0
+}
+.vote_title {
+	margin: 0 0 5px 0
+}
+#sidebar .democracy {
+	color: #fff;
+	line-height: 20px
+}
+#sidebar .dem-vote-button {
+	color: #b7875b;
+	background: #fff;
+	border: medium none
+}
+.dem-results ul {
+	margin: 10px 0 10px 5px
+}
+.dem-results ul li {
+	margin: 3px 0
+}
+.dem-results ul li label {
+	margin: 0 0 0 5px
+}
+#sidebar .dem-vote-link {
+	color: #fff;
+	float: right;
+	margin: -15px 0 0;
+	text-align: right;
+	text-decoration: none
+}
+#columns {
+	margin: 8px 0 17px 2px
+}
+ul#columns li {
+	margin: 3px 0
+}
+#video {
+	margin: 10px 0 40px 0
+}
+#login {
+	margin: 0 0 15px 0
+}
+#login input.text {
+	padding: 2px;
+	width: 154px;
+	border: 1px solid #666
+}
+#login input.btn {
+	width: 46px;
+	padding: 1px 0;
+	background: #eee;
+	border: 1px solid #666
+}
+#login ul li {
+	margin: 8px 0
+}
+#footer {
+	border-top: 2px solid #990000
+}
+/*分页开始*/
+.pageindex, .pageindex_bottom,
+.pageindex_list, pageindex_list_bottom {
+	margin: 0 0 5px 0;
+	height: 19px !important;
+	height: 20px;
+	padding: 3px 15px;
+	border-bottom: 1px solid #eee
+}
+.pageindex_bottom {
+	border: none;
+	margin: 3px 0 1px 0
+}
+.pageindex_list_bottom {
+	margin: 10px 0 0 0;
+	padding: 8px 0 10px 15px;
+	border-top: 1px solid #eee
+}
+ul#pg {
+	float: left;
+	padding: 0;
+	margin: 0 5px 0 0;
+	height: 19px !important;
+	height: 20px;
+	list-style: none;
+	font: 12px Arial, Helvetica, sans-serif
+}
+ul#pg li {
+	display: inline
+}
+ul#pg li a.pg_current:link, a.pg_current:visited, a.pg_current:hover {
+	color: #000;
+	padding: 0 3px;
+	background: #fffddd;
+	text-decoration: none
+}
+ul#pg li a.pg_normal:link, a.pg_normal:visited, a.pg_normal:hover {
+	color: #fff;
+	padding: 0 3px;
+	background: #3366ff;
+	text-decoration: none;
+	border-right: 1px #30c solid;
+	border-bottom: 1px #30c solid
+}
+ul#pg li a.pg_normal:hover {
+	background: #0063dc
+}
+ul#pg li a.pg_total:link,
+a.pg_total:visited, a.pg_total:hover {
+	color: #fff;
+	padding: 0 3px;
+	background: #f70;
+	text-decoration: none;
+	border-right: 1px #f30 solid;
+	border-bottom: 1px #f30 solid
+}
+ul#pg li a.pg_total:hover {
+	background: #f30
+}
+#pg_all {
+	float: left;
+	width: auto;
+	color: #fff;
+	padding: 2px 8px 1px 8px !important;
+	padding: 1px 8px;
+	background: #999;
+	border-right: 1px #666 solid;
+	border-bottom: 1px #666 solid;
+	font: 10px Arial, Helvetica, sans-serif
+}
+/*分页结束*/

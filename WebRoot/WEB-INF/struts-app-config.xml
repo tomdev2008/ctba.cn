@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="wareForm"
+			type="cn.ctba.equipment.web.struts.form.WareForm" />
+	</form-beans>
+
+	<action-mappings>
+	
+		<!--	ajax action -->
+		<action path="/ajax"
+			type="cn.ctba.app.web.struts.action.AjaxAction" scope="request"
+			parameter="method" unknown="false" validate="true">
+			<forward name="message" path="/common/ajaxHtml.jsp"
+				redirect="false">
+			</forward>
+		</action>
+		
+        <!--vote action -->
+		<action path="/vote"
+			type="org.net9.vote.web.struts.action.VoteAction" scope="request"
+			parameter="method" unknown="false" validate="true">
+			<forward name="vote.list" path="/apps/vote/listVotes.jsp"
+				redirect="false">
+			</forward>
+			<forward name="vote.view" path="/apps/vote/viewVote.jsp"
+				redirect="false">
+			</forward>
+			<forward name="vote.form" path="/apps/vote/voteForm.jsp"
+				redirect="false">
+			</forward>
+			<forward name="vote.do" path="/apps/vote/doVote.jsp"
+				redirect="false">
+			</forward>
+		</action>
+
+		<action path="/equipment"
+			type="cn.ctba.equipment.web.struts.action.EquipmentAction" scope="request"
+			parameter="method" unknown="false" validate="true" name="wareForm">
+			<forward name="ware.manageList" path="/apps/equipment/manageList.jsp"
+				redirect="false">
+			</forward>
+			<forward name="ware.list" path="/apps/equipment/list.jsp"
+				redirect="false">
+			</forward>
+			<forward name="fav.list" path="/apps/equipment/favList.jsp"
+				redirect="false">
+			</forward>
+			<forward name="ware.form" path="/apps/equipment/form.jsp"
+				redirect="false">
+			</forward>
+			<forward name="ware.view" path="/apps/equipment/view.jsp"
+				redirect="false">
+			</forward>
+			<forward name="ware.home" path="/apps/equipment/indexPage.jsp"
+				redirect="false">
+			</forward>
+		</action>
+
+		<action path="/equipmentUser"
+			type="cn.ctba.equipment.web.struts.action.EquipmentUserAction"
+			scope="request" parameter="method" unknown="false" validate="true">
+			<forward name="ware.home" path="/equipment/"
+				redirect="true">
+			</forward>
+		</action>
+
+		<!-- goods manage action -->
+		<action path="/manage/equipmentManage"
+			type="cn.ctba.equipment.web.struts.action.ManageAction" scope="request"
+			parameter="method" unknown="false" validate="true" name="wareForm">
+			<forward name="ware.list" path="/manage/equipment/wareList.jsp"
+				redirect="false">
+			</forward>
+			<forward name="ware.form" path="/manage/equipment/wareForm.jsp"
+				redirect="false">
+			</forward>
+			<forward name="comment.list"
+				path="/manage/equipment/commentList.jsp" redirect="false">
+			</forward>
+		</action>
+		
+		<!--	用户action -->
+		<action path="/share"
+			type="cn.ctba.share.web.struts.action.ShareAction" scope="request"
+			parameter="method" unknown="false" validate="true">
+			<forward name="share.list" path="/apps/share/shareList.jsp"
+				redirect="false">
+			</forward>
+			<forward name="share.home" path="/apps/share/shareIndexPage.jsp"
+				redirect="false">
+			</forward>
+			<forward name="share.comment.list" path="/apps/share/shareCommentList.jsp"
+				redirect="false">
+			</forward>
+		</action>
+		
+	</action-mappings>
+</struts-config>
+

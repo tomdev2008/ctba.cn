@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project basedir="." default="main" name="Ctba 工程管理">
+
+	<property file="manage.properties" />
+
+	<path id="compile.classpath">
+		<fileset dir="${lib.dir}" includes="*.jar" />
+		<fileset dir="${server.home}/lib" includes="*.jar" />
+	</path>
+
+	<target name="main" depends="update,deploy.jar,notice">
+	</target>
+
+	<target name="first" depends="clean,svn,deploy,notice">
+	</target>
+
+	<target name="clean" description="清除临时文件夹">
+		<echo>Clean work space...</echo>
+		<delete dir="${common.dir.src}" />
+	</target>
+
+	<target name="svn" description="从源代码仓库取出源代码">
+		<echo>Svn checkout...</echo>
+		<exec executable="svn">
+			<arg line="checkout ${svn.url} ${common.dir.src} --username ${svn.username} --password ${svn.password}" />
+		</exec>
+	</target>
+
+	<target name="update" description="从源代码仓库更新源代码">
+		<echo>Svn update...</echo>
+		<exec executable="svn">
+			<arg line="update ${common.dir.src} " />
+		</exec>
+	</target>
+
+	<target name="compile" description="编译源代码并拷贝配置文件">
+		<echo>Compiling ...</echo>
+		<mkdir dir="${build.dir.classes}" />
+		<javac srcdir="${src.java}" destdir="${build.dir.classes}" debug="true" classpathref="compile.classpath" deprecation="false" fork="no" verbose="false" failonerror="false" optimize="true">
+			<compilerarg line="-encoding UTF-8 " />
+		</javac>
+		<echo>Copy resources ...</echo>
+		<delete>
+			<fileset dir="${build.dir.classes}" includes="${build.resource}" />
+		</delete>
+		<copy todir="${build.dir.classes}">
+			<fileset dir="${src.conf}" includes="${build.resource}" />
+		</copy>
+	</target>
+
+
+	<target name="deploy" depends="compile" description="发布到WEB容器(Tomcat或者Resin)">
+		<echo>Deploy ...</echo>
+		<delete>
+			<fileset dir="${dist.dir.deploy}" excludes="${deploy.ignore}">
+			</fileset>
+		</delete>
+		<copy todir="${dist.dir.deploy}">
+			<fileset dir="${build.dir.web}" excludes="${deploy.ignore}" />
+		</copy>
+	</target>
+
+	<target name="notice" description="发送邮件通知">
+		<mail mailhost="${smtp.host}" subject="${mail.subject}" user="${smtp.username}" password="${smtp.password}" bcclist="${mail.bcclist}">
+			<from address="${mail.from}" />
+			<message>${mail.message}</message>
+		</mail>
+	</target>
+
+	<target name="back" description="备份网站文件（不包括数据库）">
+		<tstamp prefix="backup.">
+			<format property="TimeSign" pattern="yyyy-MM-dd-HH" />
+		</tstamp>
+		<copy todir="${backup.root}/${backup.TimeSign}">
+			<fileset dir="${dist.dir.deploy}" excludes="${backup.ignore}" />
+		</copy>
+	</target>
+
+	<target name="jsp" description="发布JSP页面到WEB容器(Tomcat或者Resin)">
+		<echo>Deploy jsp files...</echo>
+		<delete>
+			<fileset dir="${dist.dir.deploy}" includes="${build.frontend}" excludes="WEB-INF/**,${deploy.ignore}">
+			</fileset>
+		</delete>
+		<copy todir="${dist.dir.deploy}">
+			<fileset dir="${build.dir.web}" includes="${build.frontend}" excludes="WEB-INF/**,${deploy.ignore}" />
+		</copy>
+	</target>
+
+	<target name="jar" depends="compile" description="打成JAR包">
+		<delete file="${dist.backend.jar}">
+		</delete>
+		<echo>Packaging jar ...</echo>
+		<jar destfile="${dist.backend.jar}" basedir="${build.dir.classes}" >
+		</jar>
+	</target>
+
+	<target name="deploy.jar" depends="jar" description="发布到WEB容器(Tomcat或者Resin),后台打包为jar文件">
+		<echo>Deploy with jar file...</echo>
+		<delete>
+			<fileset dir="${dist.dir.deploy}" excludes="${deploy.ignore}">
+			</fileset>
+		</delete>
+		<copy todir="${dist.dir.deploy}">
+			<fileset dir="${build.dir.web}" excludes="WEB-INF/classes/**,${deploy.ignore}" />
+		</copy>
+		
+		<copy todir="${dist.dir.deploy}/WEB-INF/lib" file="${dist.backend.jar}">
+		</copy>
+		<copy todir="${dist.dir.deploy}/WEB-INF/classes">
+			<fileset dir="${src.conf}" includes="${build.resource}" excludes="${deploy.ignore}" />
+		</copy>
+	</target>
+
+	<target name="backend" depends="jar" description="发布到WEB容器,后台发布为.jar文件">
+		<echo>Deploy backend service...</echo>
+		<copy todir="${dist.dir.deploy}/WEB-INF/lib" file="${dist.backend.jar}">
+		</copy>
+		<copy todir="${dist.dir.deploy}/WEB-INF/classes">
+			<fileset dir="${src.conf}" includes="${build.resource}" excludes="${deploy.ignore}" />
+		</copy>
+	</target>
+
+</project>

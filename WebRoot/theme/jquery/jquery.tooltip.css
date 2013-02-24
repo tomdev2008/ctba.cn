@@ -1,0 +1,58 @@
+#tooltip {
+	position: absolute;
+	z-index: 3000;
+	font-size:11px!important;
+	font-size:3px;
+	border: 1px solid #74ba54;
+	background: #fff url(logos.jpg) no-repeat 95% 5%;
+	width:130px;
+	height:auto;
+	padding: 10px;
+	line-height:18px;
+	opacity: 0.95;
+	text-align:left
+}
+#tooltip h3, #tooltip div { 
+	margin: 0; 
+	font-size:11px!important;
+	font-size:12px;
+	font-weight:normal
+}
+#tooltip.pretty {
+	border: none;
+	width: 210px;
+	padding:20px;
+	height: 135px;
+	opacity: 0.95;
+}
+#tooltip.pretty div { 
+	width: 220px; 
+	font-size:12px;
+	text-align: left; 
+}
+#tooltip.fancy {
+	padding-top: 5em;
+	height: 100px;
+}
+#main { 
+	padding: 1em; 
+}
+fieldset { 
+	padding: 8px;
+}
+
+.jscom, .mix htcom   { color: #4040c2; }
+.com      { color: green; }
+.regexp   { color: maroon; }
+.string   { color: teal; }
+.keywords { color: blue; }
+.global   { color: #008; }
+.numbers  { color: #880; }
+.comm     { color: green; }
+.tag      { color: blue; }
+.entity   { color: blue; }
+.string   { color: teal; }
+.aname    { color: maroon; }
+.avalue   { color: maroon; }
+.jquery   { color: #00a; }
+.plugin   { color: red; }

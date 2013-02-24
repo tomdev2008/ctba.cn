@@ -1,0 +1,245 @@
+/* Score Card */
+.team,
+.team_r,
+.score,
+.xwf,
+.sintro { float: left; display: inline; height: 23px!important }
+.team { width: 48px; padding: 0 0 0 2px }
+.team_r { width: 51px; text-align: right }
+.score { width: 27px; text-align: center }
+.xwf { width: 36px; text-align: right; border-bottom: 1px dotted #ddd }
+.sintro { width: 142px; overflow: hidden; padding: 0 0 0 2px!important; >padding: 0 0 0 2px!important; padding: 0 0 2px 2px; border-bottom: 1px dotted #ddd }
+.gamescore { float: left; display: inline; width: 178px; height: 20px!important; padding: 3px 0 0 2px!important; padding: 0 0 0 2px }
+.scorewrap:after { content: "."; display: block; height: 0; clear: both; visibility: hidden }
+.ms_ten,
+.ms_half,
+.ms_tw { float: left; height: 25px!important; height: 22px; line-height: 25px!important; line-height: 18px; text-align: center }
+.ms_ten { width: 21px }
+.ms_tw { width: 39px }
+.ms_half { width: 78px; text-align: left }
+.ew { float: right; position: relative; margin-top: -30px }
+.nbafinals { background: url(../images/final.gif) no-repeat 50px 40px }
+.vs { color: #f70; font-weight: bold; text-align: center }
+.finalnum { font: bold 18px Arial }
+.radius { -moz-border-radius: 6px; -webkit-border-radius: 6px }
+/*.emwrap { float: left; width: 160px; height: auto; margin: 30px 0 0 10px; border: 1px solid #eee; border-bottom: 2px solid #eee }*/
+ul.em { width: 190px; padding: 8px 0 0 8px }
+ul.em li { float: left; padding: 4px; cursor: pointer }
+ul.em li img { font-size: 0 }
+.empg { text-align: right; font-size: 10px; padding: 6px 6px 10px 6px; *padding: 9px 6px }
+.replyitems { margin: 5px 0 5px 10px }
+.attachment { margin-top: 6px }
+#toolTip { display: none; position: absolute; color: #f70; padding: 5px 10px; width: auto!important; >width: auto!important; width: 180px; font-weight: bold; word-wrap: break-word; background: #ffffcc; border: 1px solid #ffcc33; -moz-border-radius: 6px; -webkit-border-radius: 6px }
+
+/*css sprites*/
+.icons_calendar_view_day,
+.icons_comment,
+.icons_comments,
+.icons_door_in,
+.icons_email,
+.icons_emoticon_smile,
+.icons_emoticon_happy,
+.icons_feed,
+.icons_group,
+.icons_heart,
+.icons_house,
+.icons_note,
+.icons_page_white_edit,
+.icons_user,
+.icons_weather_sun,
+.icons_world,
+.icons_newticket,
+.icons_email_add,
+.icons_email_open,
+.icons_hourglass,
+.icons_map,
+.tag_top { background:url(../../../images/sprite/icons_i20.png) no-repeat }
+.icons_calendar_view_day { background-position: -8px -8px }
+.icons_comment { background-position: -8px -40px }
+.icons_comments { background-position: -8px -72px }
+.icons_door_in { background-position: -8px -104px }
+.icons_email { background-position: -8px -136px }
+.icons_emoticon_smile { background-position: -8px -168px }
+.icons_emoticon_happy { background-position: -8px -200px }
+.icons_feed { background-position: -8px -232px }
+.icons_group { background-position: -8px -264px }
+.icons_heart { background-position: -8px -296px }
+.icons_house { background-position: -8px -328px }
+.icons_note { background-position: -8px -360px }
+.icons_page_white_edit { background-position: -8px -392px }
+.icons_user { background-position: -8px -424px }
+.icons_weather_sun { background-position: -8px -456px }
+.tag_top { background-position: -4px -450px }
+.icons_world { background-position: -8px -488px }
+.icons_email_add { background-position: -8px -520px }
+.icons_email_open { background-position: -8px -552px }
+.icons_hourglass { background-position: -8px -584px }
+.icons_map { background-position: -8px -616px }
+a.rss, a.rss:hover { color: #fff; padding: 0 3px; text-align: center; text-decoration: none; border: 1px solid #f70; background-position: 0 -77px; font: bold 11px Arial, Helvetica, sans-serif }
+a.rss:hover { background: #ffac00 }
+.icons_article,
+.icons_comment_s,
+.icons_newticket,
+.icons_extlink { background: url(../../../images/sprite/icons_n4.gif) no-repeat }
+.icons_article { background-position: -4px -4px }
+.icons_comment_s { background-position: -4px -27px }
+.icons_newticket { background-position: -6px -54px }
+.icons_extlink { background-position: -4px -72px }
+.dot_blue,
+.dot_gray,
+.dot_green,
+.dot_red,
+.dot_yellow,
+.tag_nore,
+.tag_none,
+.tag_remind,
+.tag_attach,
+.tag_prime { background: url(../../../images/sprite/icons_d5.png) no-repeat }
+.dot_blue { background-position: -8px -8px }
+.tag_nore { background-position: -4px -2px }
+.dot_gray { background-position: -8px -40px }
+.tag_none { background-position: -4px -34px }
+.dot_green { background-position: -8px -72px }
+.tag_remind { background-position: -4px -66px }
+.dot_red { background-position: -8px -104px }
+.tag_attach { background-position: -4px -98px }
+.dot_yellow { background-position: -8px -136px }
+.tag_prime { background-position: -4px -130px }
+.bullet_black,
+.bullet_blue,
+.bullet_green,
+.bullet_orange,
+.bullet_pink,
+.bullet_purple,
+.bullet_red,
+.bullet_white,
+.bullet_yellow { background: url(../../../images/sprite/icons_b9.png) no-repeat }
+.bullet_black { background-position: -8px -8px }
+.bullet_blue { background-position: -8px -40px }
+.bullet_green { background-position: -8px -72px }
+.bullet_orange { background-position: -8px -104px }
+.bullet_pink { background-position: -8px -136px }
+.bullet_purple { background-position: -8px -168px }
+.bullet_red { background-position: -8px -200px }
+.bullet_white { background-position: -8px -232px }
+.bullet_yellow { background-position: -8px -264px }
+
+/* Icon Bar */
+.a_rss,
+.a_share_kaixin001,
+.a_share_xiaonei,
+.a_share_google,
+.a_share_native { float: right; display: inline; height: 15px; width: 25px; line-height: 15px; *line-height: 18px; overflow: hidden; padding: 0 18px 0 5px }
+.a_rss { color: #e0862d; border: 1px solid #e0862d; background: #fff url(../../../images/sprite/rss.gif) no-repeat right top }
+.a_rss:hover { color: #fff; background: #fbbb4f url(../../../images/sprite/rss.gif) no-repeat 100% -20px }
+.a_share_kaixin001 { color: #d01e3b; border: 1px solid #d01e3b; background: #fff url(../../../images/shares/kaixin001_ico.gif) no-repeat right; *background: #fff url(../../../images/shares/kaixin001_ico.gif) no-repeat right 0 }
+.a_share_kaixin001:hover { color: #fff; border: 1px solid #d01e3b; background: #d01e3b url(../../../images/shares/kaixin001_ico.gif) no-repeat right; *background: #3b5888 url(../../../images/shares/kaixin001_ico.gif) no-repeat right 0 }
+.a_share_xiaonei { color: #525c97; border: 1px solid #7f93bc; background: #fff url(../../../images/shares/xiaonei_ico.gif) no-repeat right; *background: #fff url(../../../images/shares/xiaonei_ico.gif) no-repeat right 0 }
+.a_share_xiaonei:hover { color: #fff; border: 1px solid #3b5888; background: #3b5888 url(../../../images/shares/xiaonei_ico.gif) no-repeat right; *background: #3b5888 url(../../../images/shares/xiaonei_ico.gif) no-repeat right 0 }
+.a_share_google { color: #2426ac; border: 1px solid #2426ac; background: #fff url(../../../images/shares/google_ico.gif) no-repeat right; *background: #fff url(../../../images/shares/google_ico.gif) no-repeat right -1px }
+.a_share_google:hover { color: #2426ac; background: #eee url(../../../images/shares/google_ico.gif) no-repeat right; *background: #eee url(../../../images/shares/google_ico.gif) no-repeat right -1px }
+.a_share_native { color: #e0862d; border: 1px solid #e0862d; background: #fff url(../../../images/shares/native.gif) no-repeat right top }
+.a_share_native:hover { color: #fff; background: #fbbb4f url(../../../images/shares/native.gif) no-repeat 100% -20px }
+.brand_icons { padding-left: 2px }
+.brand_icons a { background: #fff url(../../../images/brand_all.gif) no-repeat scroll 0 0; display: block; float: left; height: 60px; margin: 2px 2px 2px 0; width: 60px; text-indent: -9999px }
+.brand_icons a:hover { background:#fff url(../../../images/brand_all.gif) no-repeat scroll 0 0 }
+.brand_icons a.nike { background-position:-240px 0 }
+.brand_icons a.adidas { background-position: -360px 0 }
+.brand_icons a.converse { background-position: -60px 0 }
+.brand_icons a.lining { background-position: -540px 0 }
+.brand_icons a.kappa { background-position: -300px 0 }
+.brand_icons a.umbro { background-position: -420px 0 }
+.brand_icons a.puma { background-position: -120px 0 }
+.brand_icons a.newbalance { background-position: -180px 0 }
+.brand_icons a.anta { background-position: -720px 0 }
+.brand_icons a.mizuno { background-position: -1260px 0 }
+.brand_icons a.lecoq { background-position: -660px 0 }
+.brand_icons a.crocs { background-position: -1200px 0 }
+.brand_icons a.thenorthface { background-position: -780px 0 }
+.brand_icons a.avia { background-position: -1140px 0 }
+.brand_icons a.knoway { background-position: -840px 0 }
+.brand_icons a.stsat { background-position: -960px 0 }
+.brand_icons a.killah { background-position: -1080px 0 }
+.brand_icons a.safiya { background-position: -1020px 0 }
+.brand_icons a.rizzo { background-position: -900px 0 }
+.brand_icons a.adidasoriginal { background-position: 0 0 }
+.brand_icons a.adidasstyle { background-position: -600px 0 }
+.brand_icons a.nike:hover { background-position: -240px -60px }
+.brand_icons a.adidas:hover { background-position: -360px -60px }
+.brand_icons a.converse:hover { background-position: -60px -60px }
+.brand_icons a.lining:hover { background-position: -540px -60px }
+.brand_icons a.kappa:hover { background-position: -300px -60px }
+.brand_icons a.umbro:hover { background-position: -420px -60px }
+.brand_icons a.puma:hover { background-position: -120px -60px }
+.brand_icons a.newbalance:hover { background-position: -180px -60px }
+.brand_icons a.anta:hover { background-position: -720px -60px }
+.brand_icons a.mizuno:hover { background-position: -1260px -60px }
+.brand_icons a.lecoq:hover { background-position: -660px -60px }
+.brand_icons a.crocs:hover { background-position: -1200px -60px }
+.brand_icons a.thenorthface:hover { background-position: -780px -60px }
+.brand_icons a.avia:hover { background-position: -1140px -60px }
+.brand_icons a.knoway:hover { background-position: -840px -60px }
+.brand_icons a.stsat:hover { background-position: -960px -60px }
+.brand_icons a.killah:hover { background-position: -1080px -60px }
+.brand_icons a.safiya:hover { background-position: -1020px -60px }
+.brand_icons a.rizzo:hover { background-position: -900px -60px }
+.brand_icons a.adidasoriginal:hover { background-position: 0 -60px }
+.brand_icons a.adidasstyle:hover { background-position: -600px -60px }
+
+/* Beijing 2008 temp */
+.bj2008 { background: #fff url(../../../images/bg_2008.png) no-repeat; border: 1px solid #ddd; border-bottom: 2px solid #ddd; float: right; margin: 0 0 10px; padding: 11px 0 7px 0; width: 200px }
+.bj2008 .title { color: #000; border: 0; margin: 0 0 6px 10px; *margin: 0 0 4px 10px }
+.bj2008 .title img { margin: 0 0 0 4px }
+.bj2008 .rank { margin: 0 0 0 6px }
+
+/* Integrity Bar */
+#integrity { margin: 5px 0 7px 8px }
+#integrity_text { width: 73px; height: 16px; font-weight: bold; line-height: 16px; *line-height: 17px; padding-left: 19px; background: url(../../../images/icons/hourglass.png) no-repeat }
+#integrity_bar { border: 1px solid #ccc; height: 12px; padding: 1px; width: 310px }
+#integrity_bar span { background: #9ec1f0; color: #fff; display: block; font-size: 11px; height: 12px; line-height: 12px; padding-left: 5px }
+
+/*Google Adsense*/
+.adsense_w120 { padding: 10px 9px }
+.adsense_w728 { padding: 6px 0 6px 5px; border-top: 1px solid #eee }
+
+/* Other ADs */
+#ad_alimama { margin-bottom: 8px }
+
+/*Border Radius*/
+.radius_all { -moz-border-radius: 6px; -webkit-border-radius: 6px }
+.radius_top_all { -moz-border-radius-topright: 6px; -moz-border-radius-topleft: 6px; -webkit-border-top-left-radius: 6px; -webkit-border-top-right-radius: 6px }
+.radius_right_all { -moz-border-radius-topright: 6px; -moz-border-radius-bottomright: 6px; -webkit-border-top-right-radius: 6px; -webkit-border-bottom-right-radius: 6px }
+.radius_bottom_all { -moz-border-radius-bottomright: 6px; -moz-border-radius-bottomleft: 6px; -webkit-border-bottom-left-radius: 6px; -webkit-border-bottom-right-radius: 6px }
+.radius_left_all { -moz-border-radius-bottomleft: 6px; -moz-border-radius-topleft: 6px; -webkit-border-bottom-left-radius: 6px; -webkit-border-top-left-radius: 6px }
+.radius_top_none { -moz-border-radius-topleft: 0; -moz-border-radius-topright: 0; -webkit-border-top-left-radius: 0; -webkit-border-top-right-radius: 0 }
+
+/* Widget for Gallery */
+#widget_gallery { position: relative; }
+#widget_gallery img { display: block; opacity: 1; position: absolute; z-index: 3; }
+
+/* Widget for bottom Tip */
+#searchEngineHintDiv { position: fixed!important; right: 5px; _position: absolute; bottom: 0; _bottom: auto; top: none;!important; _top: expression( eval(document.compatMode && document.compatMode=='CSS1Compat') ? documentElement.scrollTop + (documentElement.clientHeight - this.clientHeight) - 1 : document.body.scrollTop + (document.body.clientHeight - this.clientHeight) - 1); background: #fff; width: 250px; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px }
+#searchEngineHintDiv h2 { color: #fff; background: #f70; font-size: 12px; padding: 5px 8px; margin: 0; -moz-border-radius-topleft: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-left-radius: 4px; -webkit-border-top-right-radius: 4px }
+#searchEngineHintDiv p { padding: 5px 8px; _padding: 7px 8px 5px 8px; border-left: 1px solid #ddd; border-right: 1px solid #ddd; border-bottom: 1px dashed #ddd }
+#searchEngineHintDiv span.fright a { color: yellow }
+#searchEngineHintDiv span.fright a:hover { color: white }
+#searchEngineHintDiv ul { padding: 6px 8px 8px 8px; _padding: 6px 8px; border-left: 1px solid #ddd; border-right: 1px solid #ddd }
+#searchEngineHintDiv ul li { width: 213px; height: 20px; line-height: 20px; padding-left: 18px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; -o-text-overflow: ellipsis; /*for opera*/ background-position: -8px -262px }
+#searchEngineHintDiv ul li:after { content: "..."; padding-left: 1px }
+
+/* Password Strength */
+#pw_strength_result { display: block; width: 275px; height: 12px; font-family: Arial; line-height: 12px; background-color: #f7f7f7 }
+.pw_strength_bar { display: block; font-size: 11px; color: #fff; height: 12px; line-height: 12px; padding-left: 2px; background: #f7f7f7 url(../../../images/bar.jpg) repeat-y }
+
+/* Quote Style */
+.quote,
+.quoteStyle { color: #666; width: 420px; padding: 10px; margin: 6px 0 6px 20px; overflow: auto; background: #fffddd; word-wrap: break-word; border-left: 5px solid #ffc962 }
+
+/* tip */
+.post_tip { width: 106px; border: 1px solid #ffc962; padding: 10px; margin: 5px 0 0 10px; background: #fffeee; line-height: 18px }
+
+/* ad banner slider */
+#pic-slider { height: 90px; overflow: hidden }
+#flashnvanum { font-family: Arial; bottom: 8px; position: absolute; right: -25px; width: 90px; }
+#flashnvanum span { background: url(../../../images/slider/flashbutton.gif) no-repeat -15px 0; color: #86a2B8; cursor: pointer; float: left; height: 15px; line-height: 15px; margin: 1px; text-align: center; width: 15px; }
+#flashnvanum span.on { background: url(../../../images/slider/flashbutton.gif) no-repeat 0 0; color: #fff; height: 15px; line-height: 15px; width: 15px; }

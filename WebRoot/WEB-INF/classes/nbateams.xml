@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>NBA TEAMS</comment>
+	<entry key="未确定">resource/teamlogos/nuggets.gif</entry>
+	<entry key="金州勇士（Golden State Warriors）">resource/teamlogos/warriors.gif</entry>
+	<entry key="洛杉矶快船（LA Clippers）">resource/teamlogos/clippers.gif</entry>
+	<entry key="洛杉矶湖人（LA Lakers）">resource/teamlogos/lakers.gif</entry>
+	<entry key="菲尼克斯太阳（Phoenix Suns）">resource/teamlogos/suns.gif</entry>
+	<entry key="萨克拉门托国王（Sacramento Kings）">resource/teamlogos/kings.gif</entry>
+	<entry key="波特兰开拓者（Portland Trailblazers）">resource/teamlogos/blazers.gif</entry>
+	<entry key="俄克拉荷马城雷霆（The Oklahoma City Thunder）">resource/teamlogos/sonics.gif</entry>
+	<entry key="丹佛掘金（Denver Nuggets）">resource/teamlogos/nuggets.gif</entry>
+	<entry key="犹他爵士（Utah Jazz）">resource/teamlogos/jazz.gif</entry>
+	<entry key="明尼苏达森林狼（Minnesota Timberwolves）">resource/teamlogos/timberwolves.gif</entry>
+	<entry key="达拉斯小牛（Dallas Mavericks）">resource/teamlogos/mavericks.gif</entry>
+	<entry key="休斯顿火箭（Houston Rockets）">resource/teamlogos/rockets.gif</entry>
+	<entry key="圣安东尼奥马刺（San Antonio Spurs）">resource/teamlogos/spurs.gif</entry>
+	<entry key="孟菲斯灰熊（Memphis Grizzlies）">resource/teamlogos/grizzlies.gif</entry>
+	<entry key="新奥尔良黄蜂（New Orleans Hornets）">resource/teamlogos/hornets.gif</entry>
+	<entry key="纽约尼克斯（New York Knicks）">resource/teamlogos/knicks.gif</entry>
+	<entry key="费城76人（Philadelphia 76ers）">resource/teamlogos/76ers.gif</entry>
+	<entry key="新泽西网（New Jersey Nets）">resource/teamlogos/nets.gif</entry>
+	<entry key="波士顿凯尔特人（Boston Celtics）">resource/teamlogos/celtics.gif</entry>
+	<entry key="多伦多猛龙（Toronto Raptors）">resource/teamlogos/raptors.gif</entry>
+	<entry key="芝加哥公牛（Chicago Bulls）">resource/teamlogos/bulls.gif</entry>
+	<entry key="克里夫兰骑士（Cleveland Cavaliers）">resource/teamlogos/cavaliers.gif</entry>
+	<entry key="底特律活塞（Detroit Pistons）">resource/teamlogos/pistons.gif</entry>
+	<entry key="印第安纳步行者（Indiana Pacers）">resource/teamlogos/pacers.gif</entry>
+	<entry key="密尔沃基雄鹿（Milwaukee Bucks）">resource/teamlogos/bucks.gif</entry>
+	<entry key="奥兰多魔术（Orlando Magic）">resource/teamlogos/magic.gif</entry>
+	<entry key="华盛顿奇才（Washington Wizards）">resource/teamlogos/wizards.gif</entry>
+	<entry key="亚特兰大老鹰（Atlanta Hawks）">resource/teamlogos/hawks.gif</entry>
+	<entry key="迈阿密热火（Miami Heat）">resource/teamlogos/heat.gif</entry>
+	<entry key="夏洛特山猫（Charlotte Bobcats）">resource/teamlogos/bobcats.gif</entry>
+</properties>

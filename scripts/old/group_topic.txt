@@ -1,0 +1,1 @@
+update group_topic  set title=substring(content,1,15) where title='_'

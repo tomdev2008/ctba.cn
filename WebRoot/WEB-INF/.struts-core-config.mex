@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/index.do" location="1550,650" dimension="281,88" />
+  <StrutsActivity path="/ajax.do" location="338,734" dimension="279,104" />
+  <StrutsActivity path="/userPage.do" location="0,1036" dimension="311,104" />
+  <StrutsActivity path="/user.do" location="1337,0" dimension="282,104" />
+  <StrutsActivity path="/userExt.do" location="568,412" dimension="299,104" />
+  <StrutsActivity path="/rss.do" location="555,1036" dimension="277,104" />
+  <StrutsActivity path="error;6" location="356,1036" dimension="154,87" />
+  <StrutsActivity path="message;6" location="825,742" dimension="174,87" />
+  <StrutsActivity path="/indexPage.jsp" location="1550,850" dimension="101,49" />
+  <StrutsActivity path="/user/friendsBanner.jsp" location="0,938" dimension="168,53" />
+  <StrutsActivity path="/common/ajaxHtml.jsp" location="790,938" dimension="163,53" />
+  <StrutsActivity path="/user/page.jsp" location="97,1240" dimension="117,53" />
+  <StrutsActivity path="/plugins/inviteFriend.jsp" location="2134,314" dimension="170,53" />
+  <StrutsActivity path="/plugins/listOnlines.jsp" location="1871,314" dimension="163,53" />
+  <StrutsActivity path="/user/search.jsp" location="473,314" dimension="125,53" />
+  <StrutsActivity path="/user/friendList.jsp" location="233,314" dimension="140,53" />
+  <StrutsActivity path="/user/shareCommentList.jsp" location="350,450" dimension="164,49" />
+  <StrutsActivity path="/user/topics.jsp" location="926,314" dimension="122,53" />
+  <StrutsActivity path="/user/shareIndexPage.jsp" location="1250,450" dimension="155,49" />
+  <StrutsActivity path="/user/shareList.jsp" location="950,450" dimension="119,49" />
+  <StrutsActivity path="/plugins/listGuests.jsp" location="1148,314" dimension="159,53" />
+  <StrutsActivity path="/message/listMsgs.jsp" location="2640,314" dimension="162,53" />
+  <StrutsActivity path="/plugins/timeline.jsp" location="2902,314" dimension="149,53" />
+  <StrutsActivity path="/user/regSucceed.jsp" location="50,450" dimension="132,49" />
+  <StrutsActivity path="/user/forgetPassword.jsp" location="50,750" dimension="152,49" />
+  <StrutsActivity path="/user/reg.jsp" location="1250,750" dimension="92,49" />
+  <StrutsActivity path="/user/resetPassword.jsp" location="1250,850" dimension="147,49" />
+  <StrutsActivity path="/common/error.jsp" location="361,1223" dimension="143,53" />
+  <StrutsActivity path="/user/listFiles.jsp" location="698,314" dimension="128,53" />
+  <StrutsActivity path="/user/listUsers.jsp" location="2404,314" dimension="136,53" />
+  <StrutsActivity path="/user/listShares.jsp" location="1407,314" dimension="142,53" />
+  <StrutsActivity path="/user/listFav.jsp" location="1649,314" dimension="122,53" />
+  <StrutsActivity path="/userExt/info.jsp" location="0,636" dimension="126,53" />
+  <StrutsActivity path="/userExt/regSucceed.jsp" location="226,636" dimension="172,53" />
+  <StrutsActivity path="/userExt/forgetPassword.jsp" location="759,636" dimension="196,53" />
+  <StrutsActivity path="/userExt/reg.jsp" location="1055,636" dimension="124,53" />
+  <StrutsActivity path="/userExt/resetPassword.jsp" location="1279,636" dimension="189,53" />
+  <StrutsActivity path="/user/friendsDone.jsp" location="268,938" dimension="158,53" />
+  <StrutsActivity path="/user/boardBanner.jsp" location="526,938" dimension="164,53" />
+  <StrutsActivity path="/user/myPage.jsp" location="0,314" dimension="133,53" />
+  <StrutsActivity path="/userExt/password.jsp" location="498,636" dimension="161,53" />
+  <StrutsActivity path="/apps/share/shareCommentList.jsp" location="1250,950" dimension="197,49" />
+  <StrutsActivity path="/core/listOnlines.jsp" location="1550,950" dimension="124,49" />
+  <StrutsActivity path="/core/onlines.jsp" location="950,1050" dimension="109,49" />
+  <StrutsActivity path="/core/listGuests.jsp" location="1250,1050" dimension="122,49" />
+  <StrutsActivity path="/core/guests.jsp" location="1550,1050" dimension="108,49" />
+  <StrutsActivity path="/core/inviteFriend.jsp" location="950,1150" dimension="132,49" />
+  <StrutsActivity path="/core/timeline.jsp" location="1250,1150" dimension="112,49" />
+  <StrutsTransition id="/user.do,list.topics,/user/topics.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1434,104" />
+      <AbsolutePoint location="1434,254" />
+      <AbsolutePoint location="987,254" />
+      <AbsolutePoint location="987,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/index.do,index,/indexPage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1636,738" />
+      <AbsolutePoint location="1636,850" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userExt.do,user.reg,/user/reg.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="867,494" />
+      <AbsolutePoint location="1264,494" />
+      <AbsolutePoint location="1264,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="error;6,null,/common/error.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="433,1123" />
+      <AbsolutePoint location="433,1223" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,share.home,/user/shareIndexPage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1478,52" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="message;6,null,/common/ajaxHtml.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="912,829" />
+      <AbsolutePoint location="912,938" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ajax.do,ajax.friends,/user/friendsBanner.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="372,838" />
+      <AbsolutePoint location="372,873" />
+      <AbsolutePoint location="84,873" />
+      <AbsolutePoint location="84,938" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list.guests,/core/listGuests.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1619,52" />
+      <AbsolutePoint location="2349,52" />
+      <AbsolutePoint location="2349,1074" />
+      <AbsolutePoint location="1372,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list.friend,/user/friendList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1369,104" />
+      <AbsolutePoint location="1369,164" />
+      <AbsolutePoint location="303,164" />
+      <AbsolutePoint location="303,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list.onlines,/plugins/listOnlines.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1521,104" />
+      <AbsolutePoint location="1521,254" />
+      <AbsolutePoint location="1952,254" />
+      <AbsolutePoint location="1952,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,user.timeline,/core/timeline.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1619,82" />
+      <AbsolutePoint location="1846,82" />
+      <AbsolutePoint location="1846,1174" />
+      <AbsolutePoint location="1362,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,user.timeline,/plugins/timeline.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1608,104" />
+      <AbsolutePoint location="1608,134" />
+      <AbsolutePoint location="2976,134" />
+      <AbsolutePoint location="2976,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,share.comment.list,/user/shareCommentList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1478,52" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userExt.do,user.forget,/user/forgetPassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="568,464" />
+      <AbsolutePoint location="148,464" />
+      <AbsolutePoint location="148,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list.msg,/message/listMsgs.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1586,104" />
+      <AbsolutePoint location="1586,164" />
+      <AbsolutePoint location="2721,164" />
+      <AbsolutePoint location="2721,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userExt.do,user.reg.succeed,/user/regSucceed.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="717,464" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,share.comment.list,/apps/share/shareCommentList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1619,52" />
+      <AbsolutePoint location="2079,52" />
+      <AbsolutePoint location="2079,914" />
+      <AbsolutePoint location="1348,914" />
+      <AbsolutePoint location="1348,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,user.invite,/core/inviteFriend.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1337,22" />
+      <AbsolutePoint location="-75,22" />
+      <AbsolutePoint location="-75,1174" />
+      <AbsolutePoint location="950,1174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list.guests,/core/guests.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1619,22" />
+      <AbsolutePoint location="2349,22" />
+      <AbsolutePoint location="2349,1074" />
+      <AbsolutePoint location="1658,1074" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userPage.do,view.page,/user/page.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="155,1140" />
+      <AbsolutePoint location="155,1240" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,share.list,/user/shareList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1478,52" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list.guests,/plugins/listGuests.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1456,104" />
+      <AbsolutePoint location="1456,284" />
+      <AbsolutePoint location="1227,284" />
+      <AbsolutePoint location="1227,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/userExt.do,user.resetPassword,/user/resetPassword.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="867,464" />
+      <AbsolutePoint location="1516,464" />
+      <AbsolutePoint location="1516,874" />
+      <AbsolutePoint location="1397,874" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,user.invite,/plugins/inviteFriend.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1543,104" />
+      <AbsolutePoint location="1543,224" />
+      <AbsolutePoint location="2219,224" />
+      <AbsolutePoint location="2219,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ajax.do,message,/common/ajaxHtml.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="582,838" />
+      <AbsolutePoint location="582,873" />
+      <AbsolutePoint location="830,873" />
+      <AbsolutePoint location="830,938" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list.search,/user/search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1391,104" />
+      <AbsolutePoint location="1391,194" />
+      <AbsolutePoint location="535,194" />
+      <AbsolutePoint location="535,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list.onlines,/core/listOnlines.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1619,52" />
+      <AbsolutePoint location="2349,52" />
+      <AbsolutePoint location="2349,974" />
+      <AbsolutePoint location="1674,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/user.do,list.onlines,/core/onlines.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1337,52" />
+      <AbsolutePoint location="1114,52" />
+      <AbsolutePoint location="1114,561" />
+      <AbsolutePoint location="1017,561" />
+      <AbsolutePoint location="1017,1050" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

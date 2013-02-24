@@ -1,0 +1,73 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	padding: 0;
+	margin: 0;
+	font: 16px Verdana, Arial, Helvetica, sans-serif;
+	background: #000 url(../img/ct_henan_bg.jpg) no-repeat center bottom
+}
+#wrap {
+	width: 860px;
+	height: auto;
+	margin: 0 auto
+}
+#head {
+	float: left;
+	width: 520px;
+	height: 72px;
+	margin: 50px 0 50px 0;
+	background: url(../img/ct_henan_title.jpg)
+}
+#article {
+	float: left;
+	clear: left;
+	height: auto;
+	color: white;
+	width: auto;
+	margin: 0 0 50px 0
+	
+}
+.whitelink a {
+	color: white;
+	text-decoration: none
+}
+.whitelink a:hover {
+	color: white;
+	text-decoration: none;
+	border-bottom: 3px #fff solid
+}
+#friends {
+	float: right;
+	text-align: right;
+	margin: 300px 0 0 0
+}
+ul {
+	padding: 0;
+	margin: 0 0 20px 0;
+	list-style: none;
+	border: 1px solid #222;
+	background: #111;
+	padding: 20px;
+	opacity: .7; 
+	-moz-opacity: .7;
+	filter: alpha(opacity=70)
+}
+li {
+	padding: 10px
+}
+.m {
+	width: 220px
+}
+.q {
+	width: 100px
+}
+.b {
+	width: 438px
+}
+.l {
+	width: 325px
+}
+.w {
+	width: 180px
+}

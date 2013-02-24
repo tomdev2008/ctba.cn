@@ -1,0 +1,46 @@
+.frame{background:#fff;font-family:'lucida grande',tahoma,helvetica,arial,'bitstream vera sans',sans-serif; font-size:12px; text-align:left;line-height:19px;}
+
+.l{float:left;}
+.r{float:right; clear:right;}
+.c{clear:both;}
+
+.f13{font-size:13px;}
+
+/* 选择框外框 */
+.it_s{display:table; border:1px solid #808080;}   
+
+/* 选择框底色 */
+.it1,.it2{background:#fff; border:1px solid #fff; color:#333;}
+
+.fsg_id{float:left; width:10px; position:relative;}
+
+.fsg_it{width:10px; height:16px; font-size:12px; line-height:19px; border:0;}
+
+.fsg_nl{width:200px; position:absolute; left:-1px; top:25px; background:#fff; border:1px solid #98B1C8; border-right:3px solid #7f7f7f; border-bottom:3px solid #7f7f7f; padding:2px;}
+
+.fsg22{float:right; padding:3px 2px 0 0; position:relative;margin:3px 2px 0 0;}
+
+.cp{cursor:pointer;}
+
+.fsg_nr{width:250px; position:absolute; display:none; top:25px; right:-3px; background:#fff; border:1px solid #98B1C8; padding:2px;}
+
+/*-- suggest图层 --*/
+.sgt_o{position:absolute; display:none; border:1px solid #98B1C8; background:#fff; padding:2px;}
+.sgt_of{width:200px; height:20px; border-bottom:1px solid #eee; padding:2px 5px; color:#666; background:#fff;}
+.sgt_on{width:200px; height:20px; border-bottom:1px solid #eee; padding:2px 5px; color:#000; background:#F2F6FB;}
+
+/* 名字  背景 */
+.fsg_hy{float:left; background:#E0E5EE; margin:1px 5px 1px 0; padding:0 5px;}
+
+/*------------------------12号字按钮 START----------------------------*/
+.gb1-12,.gb2-12{height:23px; color:#333; font-size:12px; background:#e5e5e5; padding:3px 5px; border-left:1px solid #fff; border-top:1px solid #fff; border-right:1px solid #6a6a6a; border-bottom:1px solid #6a6a6a; cursor:pointer;}
+.gb2-12{background:#ddd;}
+
+.sl-gray,a.sl-gray{color:#8692A2; font-family:Arial;}a.sl-gray:hover{color:#36c; font-family:Arial;}
+
+
+.rb1-12,.rb2-12{height:23px; color:#fff; font-size:12px; background:#D32C47; padding:3px 5px; border-left:1px solid #fff; border-top:1px solid #fff; border-right:1px solid #6a6a6a; border-bottom:1px solid #6a6a6a; cursor:pointer;}
+.rb2-12{background:#C71E3A;}
+/*------------------------12号字按钮 END----------------------------*/
+
+.gbs1{border:1px solid #e2e2e2; float:left;}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="subjectForm"
+			type="org.net9.subject.web.struts.form.SubjectForm" />
+	</form-beans>
+
+	<action-mappings>
+
+		<!--	Subject action -->
+		<action path="/subject"
+			type="org.net9.subject.web.struts.action.SubjectAction" scope="request"
+			parameter="method" unknown="false" validate="true">
+			<forward name="sub.list" path="/subject/listSubjects.jsp"
+				redirect="false" />
+			<forward name="sub.indexPage" path="/subject/indexPage.jsp"
+				redirect="false" />
+			<forward name="sub.view" path="/subject/viewSubject.jsp"
+				redirect="false" />
+			<forward name="sub.topic.list"
+				path="/subject/listSubjectTopics.jsp" redirect="false" />
+			<forward name="sub.topic.view"
+				path="/subject/viewSubjectTopic.jsp" redirect="false" />
+		</action>
+	</action-mappings>
+
+</struts-config>
+

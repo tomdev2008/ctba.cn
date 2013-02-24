@@ -1,0 +1,43 @@
+<!DOCTYPE form-validation PUBLIC
+     "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.2.0//EN"
+     "http://jakarta.apache.org/commons/dtds/validator_1_2_0.dtd">
+
+<form-validation>
+
+	<global>
+
+		<validator name="int"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateInt"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			msg="errors.int" />
+		<validator name="required"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateRequired"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			msg="errors.required" />
+
+		<validator name="email"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateEmail"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			msg="" />
+	</global>
+
+	<formset>
+		<form name="valueBean">
+			<field property="email" depends="email" />
+		</form>
+
+		<form name="userForm">
+			<field property="userName" depends="required">
+				<arg0 key="nameForm.username.displayname" />
+			</field>
+			<field property="userScore" depends="required,int">
+				<arg0 key="nameForm.age.displayname" />
+			</field>
+		</form>
+
+	</formset>
+
+</form-validation>

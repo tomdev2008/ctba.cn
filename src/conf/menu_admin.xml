@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+	<item name="管理首页" link="#">
+		<item name="系统用户" link="manage/sysAdmin.shtml?method=listAdmins"
+			role="SUPER" />
+		<item name="权限分组" link="manage/sysAdmin.shtml?method=listGroups"
+			role="SUPER" />
+		<item name="修改密码" link="manage/sysAdmin.shtml?method=password" />
+		<item name="退出登录" link="manage/manage.do?method=logout"
+			confirm="您真的要退出登录么？" />
+	</item>
+
+	<item name="系统管理" role="SYS" link="#">
+		<item name="系统设置" link="manage/bbsConfig.action" />
+		<item name="系统推荐" link="manage/commend.action?method=list" />
+		<item name="反馈信息"
+			link="manage/feedbackManage.action?method=list" />
+		<item name="新鲜事管理" link="manage/manage.shtml?method=timeline" />
+		<item name="缓存信息" link="manage/manage.shtml?method=cacheInfo" />
+	</item>
+	<!--
+		<item name="邮件管理" role="E" link="#">
+		<item name="郵件设置" link="manage/mail.shtml?method=setting" />
+		<item name="收件箱" link="manage/emailManage.shtml?method=inbox" />
+		<item name="发件箱" link="manage/emailManage.shtml?method=sent" />
+		<item name="发邮件" link="manage/emailManage.shtml?method=form" />
+		<item name="发送邮件提醒" link="manage/emailManage.shtml?method=msg"
+		confirm="您确定要发送么？"  />
+		<item name="发送每日内容" link="manage/emailManage.shtml?method=topic"
+		confirm="您确定要发送么？"  />
+		<item name="发送好友新鲜事" link="manage/emailManage.shtml?method=timeline"
+		confirm="您确定要发送么？"  />
+		</item>
+	-->
+	<item name="论坛管理" role="T" link="#">
+		<item name="管理版面" link="manage/manage.do?method=listBoards" />
+		<item name="新增版面" link="manage/editBoard.action?method=form" />
+		<item name="文章列表" link="manage/manage.do?method=listTopics" />
+		<item name="回复列表" link="manage/manage.do?method=listReplies" />
+		<item name="投票列表" link="manage/manage.do?method=listVotes" />
+		<!--<item name="重建文章索引" link="manage/manage.do?method=index"
+			confirm="重建索引可能需要比较长时间..." />-->
+	</item>
+
+	<item name="博客管理" role="B" link="#">
+		<item name="博客列表"
+			link="manage/blogManage.shtml?method=listBlogs" />
+		<item name="博客文章列表"
+			link="manage/blogManage.shtml?method=listEntries" />
+		<item name="博客链接列表"
+			link="manage/blogManage.shtml?method=listLinks" />
+		<item name="博客分类列表"
+			link="manage/blogManage.shtml?method=listBlogCats" />
+		<item name="博客马甲列表"
+			link="manage/blogManage.shtml?method=listVests" />
+		<item name="博客评论列表"
+			link="manage/blogManage.shtml?method=listComments" />
+	</item>
+
+
+	<item name="小组管理" role="G" link="#">
+		<item name="小组列表"
+			link="manage/groupManage.shtml?method=listGroups" />
+		<item name="小组话题列表"
+			link="manage/groupManage.shtml?method=listTopics" />
+		<!--item name="小组通知列表"
+			link="manage/groupManage.shtml?method=listNotices" /-->
+		<item name="小组相片列表"
+			link="manage/groupManage.shtml?method=listImages" />
+		<item name="小组成员列表"
+			link="manage/groupManage.shtml?method=listGroupUsers" />
+	</item>
+
+	<!--	<item name="文章管理" role="T" link="#">-->
+	<!--		<item name="文章列表" link="manage/manage.do?method=listTopics" />-->
+	<!--		<item name="重建文章索引" link="manage/manage.do?method=index"-->
+	<!--			confirm="重建索引可能需要比较长时间..." />-->
+	<!--		<item name="首页公告" link="manage/manage.do?method=listNotices" />-->
+	<!--	</item>-->
+
+	<item name="专题管理" role="S" link="#">
+		<item name="专题列表"
+			link="manage/subManage.shtml?method=listSubjects" />
+		<item name="专题文章"
+			link="manage/subManage.shtml?method=listTopics" />
+		<item name="专题模板"
+			link="manage/subManage.shtml?method=listTemplates" />
+	</item>
+
+	<item name="新闻管理" role="N" link="#">
+		<item name="新闻分类"
+			link="manage/newsManage.shtml?method=listCategories" />
+		<item name="新闻列表"
+			link="manage/newsManage.shtml?method=listNewses" />
+		<!--item name="新闻地址"
+			link="manage/newsManage.shtml?method=listAddresses" /-->
+		<item name="用户投递"
+			link="manage/newsManage.shtml?method=listPosts" />
+		<item name="新闻评论"
+			link="manage/newsManage.shtml?method=listComments" />
+	</item>
+
+	<item name="用户管理" role="U" link="#">
+		<item name="管理用户" link="manage/manage.do?method=users" />
+		<item name="管理版主" link="manage/manage.do?method=bms" />
+		<!--		<item name="封禁列表" link="manage/manage.do?method=listForbiddens" />-->
+		<item name="管理黑名单" link="manage/manage.do?method=listBlacks" />
+	</item>
+	<!--
+		<item name="NBA数据" role="NBA" link="#">
+		<item name="NBA球队"
+		link="manage/nbaManage.shtml?method=listTeams" />
+		<item name="NBA球员"
+		link="manage/nbaManage.shtml?method=listPlayers" />
+		<item name="NBA比赛"
+		link="manage/nbaManage.shtml?method=listGames" />
+		</item-->
+	<item name="明星数据" role="NBA" link="#">
+		<item name="明星分类"
+			link="manage/nbaManage.shtml?method=listTeams" />
+		<item name="明星列表"
+			link="manage/nbaManage.shtml?method=listPlayers" />
+	</item>
+	<item name="装备管理" role="SHOES" link="#">
+		<item name="装备列表"
+			link="manage/equipmentManage.shtml?method=listEquipments" />
+		<item name="店铺列表" link="manage/shopManage.action?method=list" />
+		<item name="新增店铺" link="manage/shopManage.action?method=form" />
+	</item>
+
+	<item name="其他管理" role="OTHER" link="#">
+		<item name="分享列表" link="manage/shareManage.action?method=list" />
+		<item name="相册列表"
+			link="manage/galleryManage.action?method=list" />
+	</item>
+</menu>

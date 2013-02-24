@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>community</short-name>
+	<uri>http://www.j2bb.com</uri>
+	<description>community</description>
+	<!--	this is a tag for ubb editor-->
+	<tag>
+		<name>ubb</name>
+		<tag-class>org.net9.common.web.tag.UBBEditorTag</tag-class>
+		<body-content>empty</body-content>
+		<description>Builds a ubb editor control</description>
+	</tag>
+	<!--	this is a tag of image-->
+	<tag>
+		<name>img</name>
+		<tag-class>org.net9.common.web.tag.ImageTag</tag-class>
+		<body-content>empty</body-content>
+		<description>Builds a image string</description>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>type</name>
+			<required>false</required>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>width</name>
+			<required>false</required>
+			<type>java.lang.Integer</type>
+		</attribute>
+	</tag>
+	<!--	this is a select from pebble-->
+	<tag>
+		<name>select</name>
+		<tag-class>org.net9.common.web.tag.SelectTag</tag-class>
+		<body-content>empty</body-content>
+		<description>
+			Creates a HTML select control based upon a collection of
+			objects.
+		</description>
+
+		<attribute>
+			<name>name</name>
+			<required>true</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>size</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>multiple</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+		
+		<attribute>
+			<name>onchange</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>label</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>value</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+
+		<attribute>
+			<name>items</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.Object</type>
+		</attribute>
+
+		<attribute>
+			<name>selected</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.Object</type>
+		</attribute>
+	</tag>
+
+	<!--	this is a tag for limit-->
+	<tag>
+		<name>limit</name>
+		<tag-class>org.net9.common.web.tag.LimitTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>maxlength</name>
+			<required>true</required>
+			<type>java.lang.Integer</type>
+		</attribute>
+		<attribute>
+			<name>quote</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>ignoreUbb</name>
+			<required>false</required>
+		</attribute>
+		<attribute>
+			<name>flat</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+
+
+	<!--	this is a tag for date limit-->
+	<tag>
+		<name>date</name>
+		<tag-class>org.net9.common.web.tag.DateLimitTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>start</name>
+			<required>true</required>
+			<type>java.lang.Integer</type>
+		</attribute>
+		<attribute>
+			<name>limit</name>
+			<required>true</required>
+			<type>java.lang.Integer</type>
+		</attribute>
+		<attribute>
+			<name>quote</name>
+			<required>false</required>
+		</attribute>
+	</tag>
+
+	<!--	this is a tag for url-->
+	<tag>
+		<name>url</name>
+		<tag-class>org.net9.common.web.tag.URLEncodeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+
+		</attribute>
+	</tag>
+
+	<!--	this is a tag for html-->
+	<tag>
+		<name>html</name>
+		<tag-class>org.net9.common.web.tag.HtmlEncodeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+
+		</attribute>
+	</tag>
+
+	<!--	this is an other tag for html-->
+	<tag>
+		<name>yahtml</name>
+		<tag-class>org.net9.common.web.tag.YaHtmlEncodeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+
+		</attribute>
+	</tag>
+
+
+	<!--	this is a tag for IP-->
+	<tag>
+		<name>ip</name>
+		<tag-class>org.net9.common.web.tag.IPEncodeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+
+		</attribute>
+	</tag>
+
+	<!--	this is a tag for IP Data-->
+	<tag>
+		<name>ipData</name>
+		<tag-class>org.net9.common.web.tag.IPDataTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+
+		</attribute>
+	</tag>
+
+	<!--	this is a tag for UBB decode-->
+	<tag>
+		<name>ubbDecode</name>
+		<tag-class>org.net9.common.web.tag.UBBDecodeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+
+		</attribute>
+	</tag>
+	<!--	this is a tag for HTML decode-->
+	<tag>
+		<name>htmlDecode</name>
+		<tag-class>org.net9.common.web.tag.HtmlDecodeTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+
+		</attribute>
+	</tag>
+	<!--	this is a tag for topic content-->
+	<tag>
+		<name>topic</name>
+		<tag-class>org.net9.common.web.tag.TopicContentTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>value</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>attachment</name>
+		<tag-class>org.net9.common.web.tag.AttachmentTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>name</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>path</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+	</tag>
+	<!--	this is a tag for tinymce editor-->
+	<tag>
+		<name>mceInit</name>
+		<tag-class>org.net9.common.web.tag.TinyMceTag</tag-class>
+		<body-content>empty</body-content>
+		<attribute>
+			<name>target</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+		</attribute>
+		<attribute>
+			<name>withTag</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.Boolean</type>
+		</attribute>
+		<attribute>
+			<name>width</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.Integer</type>
+		</attribute>
+		<attribute>
+			<name>height</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.Integer</type>
+		</attribute>
+	</tag>
+
+	<!-- Custom Date Format Tag -->
+	<tag>
+		<name>formatTime</name>
+		<tag-class>org.net9.common.web.tag.CustomDateFormaterTag</tag-class>
+		<body-content>empty</body-content>
+		<description>自定义Date Formater，将时间格式化成自定义格式的字符串，形如：1小时20分钟前</description>
+		<attribute>
+			<name>time</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+			<description>待格式化的字符串，例如：1900-01-01 00:00</description>
+		</attribute>
+		<attribute>
+			<name>pattern</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>java.lang.String</type>
+			<description>用于解析time属性的Pattern，默认：yyyy-MM-dd HH:mm:ss</description>
+		</attribute>
+	</tag>
+</taglib>

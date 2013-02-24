@@ -1,0 +1,24 @@
+.ac_results {
+	border: #f70 solid 1px;
+	border-top: 0;
+	width: 136px;
+	background: #fff
+}
+.ac_results ul {
+}
+.ac_results li {
+	padding: 2px 5px;
+	margin: 1px;
+	cursor: default;
+	display: block;
+	width: 122px;
+	cursor: pointer;
+	overflow: hidden
+}
+.ac_loading {
+	background: #fff;
+}
+.ac_over {
+	background: #f70;
+	color: #fff
+}

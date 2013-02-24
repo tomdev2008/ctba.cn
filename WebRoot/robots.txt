@@ -1,0 +1,12 @@
+#
+# robots.txt for http://ctba.cn/
+#
+# $Id: robots.txt,v 1.48 2007/12 gerald Exp $
+#
+
+# exclude some access-controlled areas
+User-agent: *
+Disallow: /manage/
+Disallow: /fckeditor/
+Disallow: /publish/
+

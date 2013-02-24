@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+	<tlib-version>1.0</tlib-version>
+	<jsp-version>2.0</jsp-version>
+	<short-name>community</short-name>
+	<uri>http://www.ctba.cn</uri>
+	<description>ctba</description>
+
+	<tag>
+		<name>wrapblog</name>
+		<tag-class>org.net9.core.web.tag.BlogWrapTag</tag-class>
+		<body-content>empty</body-content>
+		<description>blog wrapper</description>
+		<attribute>
+			<name>blog</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>org.net9.domain.model.blog.Blog</type>
+		</attribute>
+		<attribute>
+			<name>user</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>org.net9.domain.model.core.User</type>
+		</attribute>
+		<attribute>
+			<name>maxlength</name>
+			<required>false</required>
+			<type>java.lang.Integer</type>
+		</attribute>
+		<attribute>
+			<name>linkonly</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>wrapuser</name>
+		<tag-class>org.net9.core.web.tag.UserWrapTag</tag-class>
+		<body-content>empty</body-content>
+		<description>user wrapper</description>
+		<attribute>
+			<name>user</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>org.net9.domain.model.core.User</type>
+		</attribute>
+		<attribute>
+			<name>maxlength</name>
+			<required>false</required>
+			<type>java.lang.Integer</type>
+		</attribute>
+		<attribute>
+			<name>linkonly</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+	</tag>
+
+	<tag>
+		<name>wrapgroup</name>
+		<tag-class>org.net9.core.web.tag.GroupWrapTag</tag-class>
+		<body-content>empty</body-content>
+		<description>group wrapper</description>
+		<attribute>
+			<name>group</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<type>org.net9.domain.model.group.GroupModel</type>
+		</attribute>
+		<attribute>
+			<name>maxlength</name>
+			<required>false</required>
+			<type>java.lang.Integer</type>
+		</attribute>
+		<attribute>
+			<name>linkonly</name>
+			<required>false</required>
+			<type>java.lang.Boolean</type>
+		</attribute>
+	</tag>
+
+</taglib>

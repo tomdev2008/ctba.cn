@@ -1,0 +1,119 @@
+form, input, textarea, select {
+	font: 12px Arial, Helvetica, sans-serif;
+	vertical-align: middle
+}
+textarea {
+	line-height: 18px;
+	overflow-y: visible /*only for ie*/
+}
+fieldset {
+	padding:1.4em;
+	margin: 0 0 1.5em 0;
+	border: 1px solid #ccc
+}
+legend {
+	font-weight: bold;
+	font-size: 1.2em
+}
+.topicContent, .formTextarea, .ftt {
+	color: #333;
+	padding: 2px;
+	width: 450px;
+	table-layout: fixed;
+	word-break: break-all;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px
+}
+.topicContent {
+	height: 250px;
+	margin-top: 2px
+}
+.ftt {
+	padding: 5px;
+	_height: 100px;
+	min-height: 100px
+}
+.formTextarea {
+	padding: 3px;
+	margin: 5px 0;
+	_height: 150px;
+	min-height: 150px
+}
+.formInput, .formInputs {
+	color: #333;
+	padding: 3px;
+	margin: 5px 0;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px
+}
+.replyform {
+	margin: 2px 0 10px 10px
+}
+input, textarea, select, div.formTextarea {
+	background: #f9f9f9;
+	border-top: 1px solid #999;
+	border-right: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	border-left: 1px solid #999
+}
+input:focus, textarea:focus {
+	background: #fff;
+	border-top: 1px solid #ff7700;
+	border-right: 1px solid #ffbb00;
+	border-bottom: 1px solid #ffbb00;
+	border-left: 1px solid #ff7700
+}
+input.search_input, input.search_input:focus {
+	width: 121px;
+	height: 17px;
+	color: #ff7700;
+	font: 12px Verdana;
+	border: 1px solid #ddd;
+	padding: 3px 0 0 16px;
+	background: #fff url(../img/searchicon.png) no-repeat 3px center
+}
+
+/* Input & Link Button */
+.link_btn, .input_btn {
+	width: auto;
+	color: #994800;
+	border: 1px #ecc101 solid;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background-position: 0 -192px
+}
+.link_btn {
+	padding: 2px 6px!important;
+	padding: .3em .4em 0 .4em
+}
+.input_btn {
+	color: #994800;
+	padding: 2px 6px;
+	overflow: visible;
+	#padding: 2px 3px 0 3px;
+	_padding: .3em .2em 0 .3em
+}
+.link_btn:hover, .input_btn:hover, input.link_btn:focus, input.input_btn:focus {
+	color: #994800;
+	cursor: pointer;
+	border: 1px solid #ecc101;
+	background-position: 0 -215px
+}
+.btn_mt {
+	float: left;
+	clear: left;
+	margin: 7px 0 7px 0!important;
+	margin: 7px 0 0 0
+}
+a.link_btn_orange {
+	display: block;
+	color: #fff;
+	text-align: center;
+	height: 19px;
+	line-height: 19px;
+	background: #aaa
+}
+a.link_btn_orange:hover {
+	color: #fff;
+	background: #f70
+}

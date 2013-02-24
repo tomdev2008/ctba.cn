@@ -1,0 +1,2 @@
+sample:
+<embed height="20" width="240" name="line" src="/Flash/audioplayer.swf" type="application/x-shockwave-flash" quality="high" flashvars="file=http://www.sd-bzsy.com/bbs/images/upfile/2005-7/200571322956.mp3&amp;repeat=false&amp;autostart=true&amp;showdigits=ture&amp;showdownload=false&amp;width=240&amp;height=20"/>

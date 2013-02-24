@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+
+<title>jQuery Autocomplete Plugin</title>
+<script type="text/javascript" src="jquery-1.1.2.pack.js"></script>
+<script type='text/javascript' src='jquery.bgiframe.min.js'></script>
+<script type='text/javascript' src='dimensions.js'></script>
+<script type='text/javascript' src='jquery.autocomplete.js'></script>
+<script type='text/javascript' src='localdata.js'></script>
+<link rel="stylesheet" type="text/css" href="main.css" />
+<link rel="stylesheet" type="text/css" href="jquery.autocomplete.css" />
+	
+<script type="text/javascript">
+$().ready(function() {
+
+	function findValueCallback(event, data, formatted) {
+		$("<li>").text( !data ? "No match!" : "Selected: " + formatted).appendTo("#result");
+	}
+	
+	function formatItem(row) {
+		//var row = row.split("|");
+		return row[0] + " (id: " + row[1] + ")";
+	}
+	
+	function formatResult(row) {
+		return row[0];
+	}
+	
+	$("#suggest1").autocomplete(cities);
+	$("#suggest12").autocomplete(months, {
+		minChars: 0,
+		max: 12,
+		autoFill: true
+	});
+	$("#suggest13").autocomplete(emails, {
+		minChars: 0,
+		width: 310,
+		matchContains: true,
+		formatItem: function(row, i, max) {
+			return i + "/" + max + ": \"" + row.name + "\" <" + row.to + ">";
+		},
+		formatResult: function(row) {
+			return row.to;
+		}
+	});
+	$("#suggest2").autocomplete("search.php", {
+		delay: 150,
+		width: 260,
+		formatItem: formatItem,
+		formatResult: formatResult,
+		selectFirst: false
+	});
+	$("#suggest3").autocomplete(cities, {
+		multiple: true,
+		mustMatch: true,
+		autoFill: true
+	});
+	$("#suggest4").autocomplete('search.php', {
+		multiple: true,
+		matchContains: true,
+		formatItem: formatItem,
+		formatResult: formatResult,
+		extraParams: {
+			foo: "bar"
+		}
+	});
+	$(":text, textarea").result(findValueCallback).next().click(function() {
+		$(this).prev().search();
+	});
+	$("#suggest2").result(function(event, data, formatted) {
+		$(this).find("..+/input").val(data[1]);
+	});
+	$("#suggest4").result(function(event, data, formatted) {
+		var hidden = $(this).find("..+/input");
+		hidden.val( (hidden.val() ? hidden.val() + ";" : hidden.val()) + data[1]);
+	});
+});
+</script>
+	
+</head>
+
+<body>
+
+<h1>jQuery Autocomplete Plugin</h1>
+
+<div id="content">
+	<h3>This is based on Dylan's initial plugin and Dan's and Anjesh' mods.</h3>
+	
+	<form>
+		<p>
+			<label>Single City (local):</label>
+			<input type="text" id="suggest1" />
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Month (local):</label>
+			<input type="text" id="suggest12" />
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>E-Mail (local):</label>
+			<input type="text" id="suggest13" />
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Single Bird (remote):</label>
+			<input type="text" id="suggest2" />
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Hidden input</label>
+			<input />
+		</p>
+		<p>
+			<label>Multiple Cities (local):</label>
+			<textarea id='suggest3' cols='40' rows='3'></textarea>
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Multiple Birds (remote):</label>
+			<textarea id='suggest4' ></textarea>
+			<input type="button" value="Get Value" />
+		</p>
+		<p>
+			<label>Hidden input</label>
+			<input />
+		</p>
+		<p>
+			<label>Some dropdown (&lt;3 IE):</label>
+			<select>
+				<option value="">Item 12334455</option>
+				<option value="2">Item 2</option>
+				<option value="3">Item 3</option>
+				<option value="4">Item 4</option>
+			</select>
+		</p>
+	</form>
+	
+	<h3>Result:</h3> <ol id="result"></ol>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/multiImgUpload.do" location="950,750" dimension="364,84" />
+  <StrutsActivity path="/img.do" location="893,0" dimension="310,84" />
+  <StrutsActivity path="/imgUpload.do" location="1830,0" dimension="346,84" />
+  <StrutsActivity path="/gallery/miniForm.jsp" location="50,950" dimension="166,48" />
+  <StrutsActivity path="/gallery/imgForm.jsp" location="350,950" dimension="160,48" />
+  <StrutsActivity path="/gallery/indexPage.jsp" location="50,350" dimension="137,49" />
+  <StrutsActivity path="/gallery/galleryView.jsp" location="0,234" dimension="184,48" />
+  <StrutsActivity path="/gallery/faceList.jsp" location="284,234" dimension="166,48" />
+  <StrutsActivity path="/gallery/miniFrame.jsp" location="650,950" dimension="135,49" />
+  <StrutsActivity path="/gallery/galleryForm.jsp" location="550,234" dimension="184,48" />
+  <StrutsActivity path="/gallery/miniList.jsp" location="834,234" dimension="166,48" />
+  <StrutsActivity path="/group/imgForm.jsp" location="1644,234" dimension="148,48" />
+  <StrutsActivity path="/gallery/imgView.jsp" location="1100,234" dimension="160,48" />
+  <StrutsActivity path="/gallery/galleryList.jsp" location="1360,234" dimension="184,48" />
+  <StrutsActivity path="/group/imgList.jsp" location="1892,234" dimension="148,48" />
+  <StrutsActivity path="/group/noticeList.jsp" location="0,561" dimension="166,48" />
+  <StrutsActivity path="/group/groupFrame.jsp" location="266,561" dimension="166,48" />
+  <StrutsActivity path="/group/memberForm.jsp" location="532,561" dimension="166,48" />
+  <StrutsActivity path="/group/myGroups.jsp" location="798,561" dimension="154,48" />
+  <StrutsActivity path="/group/noticeForm.jsp" location="1052,561" dimension="166,48" />
+  <StrutsActivity path="/group/joinGroup.jsp" location="1318,561" dimension="160,48" />
+  <StrutsActivity path="/group/indexPage.jsp" location="1578,561" dimension="160,48" />
+  <StrutsActivity path="/group/leaveGroup.jsp" location="1838,561" dimension="166,48" />
+  <StrutsActivity path="/group/noticeView.jsp" location="2104,561" dimension="166,48" />
+  <StrutsActivity path="/group/activityForm.jsp" location="0,838" dimension="178,48" />
+  <StrutsActivity path="/group/activityList.jsp" location="278,838" dimension="178,48" />
+  <StrutsActivity path="/group/activityView.jsp" location="556,838" dimension="178,48" />
+  <StrutsActivity path="/group/imgView.jsp" location="2157,234" dimension="148,48" />
+  <StrutsTransition id="/img.do,img.list,/group/imgList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1184,84" />
+      <AbsolutePoint location="1184,114" />
+      <AbsolutePoint location="1929,114" />
+      <AbsolutePoint location="1929,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,img.view.group,/group/imgView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1048,0" />
+      <AbsolutePoint location="1048,-75" />
+      <AbsolutePoint location="2231,-75" />
+      <AbsolutePoint location="2231,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,image.frame.mini,/gallery/miniFrame.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1048,42" />
+      <AbsolutePoint location="717,974" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,gallery.form,/gallery/galleryForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="990,84" />
+      <AbsolutePoint location="990,174" />
+      <AbsolutePoint location="642,174" />
+      <AbsolutePoint location="642,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,img.view,/gallery/imgView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1067,84" />
+      <AbsolutePoint location="1067,204" />
+      <AbsolutePoint location="1180,204" />
+      <AbsolutePoint location="1180,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/multiImgUpload.do,form,/gallery/imgForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,792" />
+      <AbsolutePoint location="471,792" />
+      <AbsolutePoint location="471,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/imgUpload.do,img.list,/group/imgList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="2003,84" />
+      <AbsolutePoint location="2003,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/imgUpload.do,img.form,/group/imgForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1887,84" />
+      <AbsolutePoint location="1887,144" />
+      <AbsolutePoint location="1755,144" />
+      <AbsolutePoint location="1755,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,img.form,/group/imgForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1145,84" />
+      <AbsolutePoint location="1145,144" />
+      <AbsolutePoint location="1681,144" />
+      <AbsolutePoint location="1681,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,gallery.home,/gallery/indexPage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1048,42" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,gallery.face,/gallery/faceList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="951,84" />
+      <AbsolutePoint location="951,144" />
+      <AbsolutePoint location="367,144" />
+      <AbsolutePoint location="367,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,gallery.view.mini,/gallery/miniList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1029,84" />
+      <AbsolutePoint location="1029,204" />
+      <AbsolutePoint location="917,204" />
+      <AbsolutePoint location="917,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/multiImgUpload.do,form.mini,/gallery/miniForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="950,762" />
+      <AbsolutePoint location="199,762" />
+      <AbsolutePoint location="199,950" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,gallery.list,/gallery/galleryList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1106,84" />
+      <AbsolutePoint location="1106,174" />
+      <AbsolutePoint location="1452,174" />
+      <AbsolutePoint location="1452,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/img.do,gallery.view,/gallery/galleryView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="912,84" />
+      <AbsolutePoint location="912,114" />
+      <AbsolutePoint location="92,114" />
+      <AbsolutePoint location="92,234" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

@@ -1,0 +1,5 @@
+http://blog.goo.ne.jp/XMLRPC
+http://blogsearch.google.com/ping/RPC2
+http://www.feedsky.com/api/rpc2
+http://www.xianguo.com/xmlrpc/ping.php
+http://www.zhuaxia.com/rpc/server.php

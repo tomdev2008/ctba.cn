@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+    <action-mappings>
+		<!--	Group action-->
+        <action path="/group"
+			type="org.net9.group.web.struts.action.GroupAction" scope="request"
+			parameter="method" unknown="false" validate="true">
+            <forward name="group.index" path="/group/indexPage.jsp"
+				redirect="false">
+            </forward>
+            <forward name="group.mine" path="/group/myGroups.jsp"
+				redirect="false">
+            </forward>
+            <forward name="group.list.simple"
+				path="/group/groupFrame.jsp" redirect="false">
+            </forward>
+            <forward name="notice.list" path="/group/noticeList.jsp"
+				redirect="false">
+            </forward>
+            <forward name="group.join" path="/group/joinGroup.jsp"
+				redirect="false">
+            </forward>
+            <forward name="group.leave" path="/group/leaveGroup.jsp"
+				redirect="false">
+            </forward>
+            <forward name="group.invite" path="/group/memberForm.jsp"
+				redirect="false">
+            </forward>
+            <forward name="notice.form" path="/group/noticeForm.jsp"
+				redirect="false">
+            </forward>
+            <forward name="notice.view" path="/group/noticeView.jsp"
+				redirect="false">
+            </forward>
+        </action>
+
+        <action path="/activity"
+			type="org.net9.group.web.struts.action.ActivityAction"
+			scope="request" parameter="method" unknown="false" validate="true">
+            <forward name="act.list" path="/group/activityList.jsp"
+				redirect="false">
+            </forward>
+            <forward name="act.list.all" path="/group/activityListAll.jsp"
+				redirect="false">
+            </forward>
+            <forward name="act.form" path="/group/activityForm.jsp"
+				redirect="false">
+            </forward>
+            <forward name="act.view" path="/group/activityView.jsp"
+				redirect="false">
+            </forward>
+        </action>
+
+    </action-mappings>
+
+</struts-config>
+

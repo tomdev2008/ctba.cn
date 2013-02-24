@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/board.do" location="745,387" dimension="251,84" />
+  <StrutsActivity path="/boardIndexPage.do" location="1850,1050" dimension="281,88" />
+  <StrutsActivity path="/plugins/vote/listVotes.jsp" location="1850,450" dimension="151,49" />
+  <StrutsActivity path="/plugins/vote/doVote.jsp" location="350,450" dimension="146,49" />
+  <StrutsActivity path="/plugins/vote/voteForm.jsp" location="1550,450" dimension="156,49" />
+  <StrutsActivity path="/plugins/vote/viewVote.jsp" location="2150,150" dimension="156,49" />
+  <StrutsActivity path="/board/transeTopic.jsp" location="1850,750" dimension="172,48" />
+  <StrutsActivity path="/board/users.jsp" location="0,621" dimension="114,48" />
+  <StrutsActivity path="/board/listTopics.jsp" location="214,621" dimension="136,48" />
+  <StrutsActivity path="/board/listBoards.jsp" location="450,621" dimension="138,48" />
+  <StrutsActivity path="/board/viewTopic.jsp" location="688,621" dimension="137,48" />
+  <StrutsActivity path="/board/search.jsp" location="925,621" dimension="120,48" />
+  <StrutsActivity path="/board/boardStatus.jsp" location="1145,621" dimension="147,48" />
+  <StrutsActivity path="/board/boardFrame.jsp" location="1392,621" dimension="146,48" />
+  <StrutsActivity path="/board/hot.jsp" location="1638,621" dimension="102,48" />
+  <StrutsActivity path="/board/indexPage.jsp" location="50,750" dimension="133,49" />
+  <StrutsActivity path="/gallery/miniForm.jsp" location="650,1050" dimension="129,49" />
+  <StrutsActivity path="/gallery/imgForm.jsp" location="350,1050" dimension="153,53" />
+  <StrutsActivity path="/indexPage.jsp" location="417,1749" dimension="104,48" />
+  <StrutsActivity path="/user/imgForm.jsp" location="1250,1050" dimension="139,53" />
+  <StrutsActivity path="/user/friendsBanner.jsp" location="841,1472" dimension="151,48" />
+  <StrutsActivity path="/common/ajaxHtml.jsp" location="1355,1472" dimension="145,48" />
+  <StrutsActivity path="/user/friendsDone.jsp" location="2150,650" dimension="158,53" />
+  <StrutsActivity path="/user/boardBanner.jsp" location="1093,1472" dimension="144,48" />
+  <StrutsActivity path="/user/page.jsp" location="950,750" dimension="117,53" />
+  <StrutsActivity path="/user/myPage.jsp" location="2867,294" dimension="120,48" />
+  <StrutsActivity path="/user/friendList.jsp" location="2150,850" dimension="140,53" />
+  <StrutsActivity path="/user/search.jsp" location="571,294" dimension="114,48" />
+  <StrutsActivity path="/user/listFiles.jsp" location="785,294" dimension="121,48" />
+  <StrutsActivity path="/user/topics.jsp" location="950,1050" dimension="122,53" />
+  <StrutsActivity path="/plugins/listGuests.jsp" location="1850,650" dimension="131,49" />
+  <StrutsActivity path="/user/listShares.jsp" location="1850,950" dimension="118,49" />
+  <StrutsActivity path="/user/listFav.jsp" location="1235,294" dimension="115,48" />
+  <StrutsActivity path="/plugins/listOnlines.jsp" location="2150,450" dimension="133,49" />
+  <StrutsActivity path="/plugins/inviteFriend.jsp" location="2150,550" dimension="140,49" />
+  <StrutsActivity path="/user/listUsers.jsp" location="111,294" dimension="126,48" />
+  <StrutsActivity path="/message/listMsgs.jsp" location="1550,1150" dimension="162,53" />
+  <StrutsActivity path="/plugins/timeline.jsp" location="1850,550" dimension="121,49" />
+  <StrutsActivity path="/userExt/info.jsp" location="0,918" dimension="116,48" />
+  <StrutsActivity path="/userExt/regSucceed.jsp" location="216,918" dimension="156,48" />
+  <StrutsActivity path="/userExt/password.jsp" location="472,918" dimension="145,48" />
+  <StrutsActivity path="/userExt/forgetPassword.jsp" location="987,918" dimension="176,48" />
+  <StrutsActivity path="/userExt/reg.jsp" location="1263,918" dimension="113,48" />
+  <StrutsActivity path="/userExt/resetPassword.jsp" location="1850,850" dimension="196,48" />
+  <StrutsActivity path="/common/error.jsp" location="1550,950" dimension="114,49" />
+  <StrutsActivity path="/subject/indexPage.jsp" location="0,1195" dimension="147,48" />
+  <StrutsActivity path="/subject/viewSubject.jsp" location="247,1195" dimension="156,48" />
+  <StrutsActivity path="/subject/viewSubjectTopic.jsp" location="503,1195" dimension="184,48" />
+  <StrutsActivity path="/subject/listSubjectTopics.jsp" location="787,1195" dimension="183,48" />
+  <StrutsActivity path="/subject/listSubjects.jsp" location="1070,1195" dimension="155,48" />
+  <StrutsActivity path="/user/uploadFiles.jsp" location="81,1749" dimension="138,48" />
+  <StrutsActivity path="/user/listFriends.jsp" location="337,294" dimension="134,48" />
+  <StrutsActivity path="/user/myTopics.jsp" location="1006,294" dimension="129,48" />
+  <StrutsActivity path="/user/listMsgs.jsp" location="2392,294" dimension="123,48" />
+  <StrutsActivity path="/user/inviteFriend.jsp" location="1250,450" dimension="172,48" />
+  <StrutsActivity path="/user/myBoards.jsp" location="1450,294" dimension="131,48" />
+  <StrutsActivity path="/user/listOnlines.jsp" location="1681,294" dimension="134,48" />
+  <StrutsActivity path="/user/mySpace.jsp" location="2166,294" dimension="126,48" />
+  <StrutsActivity path="/user/timeline.jsp" location="50,1050" dimension="108,49" />
+  <StrutsActivity path="/user/listGuests.jsp" location="50,450" dimension="118,49" />
+  <StrutsActivity path="/user/frdTagListInfo.jsp" location="1915,294" dimension="151,48" />
+  <StrutsActivity path="/user/frdTagManage.jsp" location="2615,294" dimension="152,48" />
+  <StrutsActivity path="/vote/viewVote.jsp" location="670,1472" dimension="127,48" />
+  <StrutsActivity path="/vote/doVote.jsp" location="226,1472" dimension="116,48" />
+  <StrutsActivity path="/vote/voteForm.jsp" location="442,1472" dimension="128,48" />
+  <StrutsActivity path="/vote/listVotes.jsp" location="0,1472" dimension="126,48" />
+  <StrutsActivity path="/userExt/sendPassword.jsp" location="717,918" dimension="170,48" />
+  <StrutsActivity path="/error.jsp" location="642,1737" dimension="76,48" />
+  <StrutsActivity path="/user/invate.jsp" location="1550,850" dimension="136,48" />
+  <StrutsTransition id="/board.do,board.users,/board/users.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="745,399" />
+      <AbsolutePoint location="35,399" />
+      <AbsolutePoint location="35,621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/board.do,board.hot,/board/hot.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="840,471" />
+      <AbsolutePoint location="840,565" />
+      <AbsolutePoint location="1689,565" />
+      <AbsolutePoint location="1689,621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/board.do,board.search,/board/search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="940,471" />
+      <AbsolutePoint location="940,621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/board.do,board.boards,/board/boardFrame.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="870,471" />
+      <AbsolutePoint location="870,514" />
+      <AbsolutePoint location="1465,514" />
+      <AbsolutePoint location="1465,621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/board.do,topic.transe,/board/transeTopic.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="996,399" />
+      <AbsolutePoint location="2016,399" />
+      <AbsolutePoint location="2016,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vote.do,vote.view,/plugins/vote/viewVote.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="272,1360" />
+      <AbsolutePoint location="-75,1360" />
+      <AbsolutePoint location="-75,174" />
+      <AbsolutePoint location="2150,174" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/boardIndexPage.do,index,/board/indexPage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1990,1050" />
+      <AbsolutePoint location="1990,1014" />
+      <AbsolutePoint location="131,1014" />
+      <AbsolutePoint location="131,799" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/board.do,board.status,/board/boardStatus.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="996,429" />
+      <AbsolutePoint location="1218,429" />
+      <AbsolutePoint location="1218,621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vote.do,vote.list,/plugins/vote/listVotes.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="517,1360" />
+      <AbsolutePoint location="1785,1360" />
+      <AbsolutePoint location="1785,474" />
+      <AbsolutePoint location="1850,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vote.do,vote.do,/plugins/vote/doVote.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="272,1330" />
+      <AbsolutePoint location="198,1330" />
+      <AbsolutePoint location="198,474" />
+      <AbsolutePoint location="350,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/board.do,board.view,/board/listTopics.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="745,429" />
+      <AbsolutePoint location="282,429" />
+      <AbsolutePoint location="282,621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/board.do,board.list,/board/listBoards.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="745,465" />
+      <AbsolutePoint location="519,465" />
+      <AbsolutePoint location="519,621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/board.do,topic.view,/board/viewTopic.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="810,471" />
+      <AbsolutePoint location="810,621" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vote.do,vote.form,/plugins/vote/voteForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="517,1330" />
+      <AbsolutePoint location="1755,1330" />
+      <AbsolutePoint location="1755,474" />
+      <AbsolutePoint location="1706,474" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

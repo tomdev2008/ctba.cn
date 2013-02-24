@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/ajax.do" location="50,50" dimension="242,88" />
+  <StrutsActivity path="/vote.do" location="309,282" dimension="252,88" />
+  <StrutsActivity path="/equipment.do" location="459,0" dimension="270,88" />
+  <StrutsActivity path="/equipmentUser.do" location="0,1128" dimension="292,88" />
+  <StrutsActivity path="/manage/equipmentManage.do" location="229,846" dimension="258,88" />
+  <StrutsActivity path="/share.do" location="262,564" dimension="257,88" />
+  <StrutsActivity path="/common/ajaxHtml.jsp" location="50,350" dimension="136,49" />
+  <StrutsActivity path="/apps/vote/listVotes.jsp" location="0,470" dimension="144,49" />
+  <StrutsActivity path="/apps/vote/doVote.jsp" location="244,470" dimension="138,49" />
+  <StrutsActivity path="/apps/vote/voteForm.jsp" location="482,470" dimension="150,49" />
+  <StrutsActivity path="/apps/vote/viewVote.jsp" location="732,470" dimension="148,49" />
+  <StrutsActivity path="/apps/equipment/view.jsp" location="0,188" dimension="154,49" />
+  <StrutsActivity path="/apps/equipment/list.jsp" location="254,188" dimension="145,49" />
+  <StrutsActivity path="/apps/equipment/favList.jsp" location="950,450" dimension="164,49" />
+  <StrutsActivity path="/apps/equipment/commentList.jsp" location="499,188" dimension="191,49" />
+  <StrutsActivity path="/apps/equipment/form.jsp" location="790,188" dimension="154,49" />
+  <StrutsActivity path="/apps/equipment/indexPage.jsp" location="1044,188" dimension="182,49" />
+  <StrutsActivity path="/equipment/" location="102,1316" dimension="87,49" />
+  <StrutsActivity path="/manage/goods/wareList.jsp" location="0,1034" dimension="166,49" />
+  <StrutsActivity path="/manage/goods/commentList.jsp" location="266,1034" dimension="185,49" />
+  <StrutsActivity path="/manage/goods/wareForm.jsp" location="551,1034" dimension="174,49" />
+  <StrutsActivity path="/apps/share/shareCommentList.jsp" location="0,752" dimension="197,49" />
+  <StrutsActivity path="/apps/share/shareIndexPage.jsp" location="297,752" dimension="188,49" />
+  <StrutsActivity path="/apps/share/shareList.jsp" location="585,752" dimension="152,49" />
+  <StrutsActivity path="/apps/equipment/manageList.jsp" location="1250,450" dimension="186,49" />
+  <StrutsTransition id="/equipment.do,ware.view,/apps/equipment/view.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="459,35" />
+      <AbsolutePoint location="35,35" />
+      <AbsolutePoint location="35,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipmentUser.do,ware.home,/equipment/,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="146,1216" />
+      <AbsolutePoint location="146,1316" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,ware.comments,/apps/equipment/commentList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="594,88" />
+      <AbsolutePoint location="594,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/equipmentManage.do,ware.form,/manage/goods/wareForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="487,890" />
+      <AbsolutePoint location="638,890" />
+      <AbsolutePoint location="638,1034" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vote.do,vote.do,/apps/vote/doVote.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="367,370" />
+      <AbsolutePoint location="367,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/equipmentManage.do,ware.list,/manage/goods/wareList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="229,890" />
+      <AbsolutePoint location="83,890" />
+      <AbsolutePoint location="83,1034" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,ware.list,/apps/equipment/manageList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="594,0" />
+      <AbsolutePoint location="594,-75" />
+      <AbsolutePoint location="1343,-75" />
+      <AbsolutePoint location="1343,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vote.do,vote.form,/apps/vote/voteForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="497,370" />
+      <AbsolutePoint location="497,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/share.do,share.comment.list,/apps/share/shareCommentList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="262,608" />
+      <AbsolutePoint location="98,608" />
+      <AbsolutePoint location="98,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/manage/equipmentManage.do,comment.list,/manage/goods/commentList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="358,934" />
+      <AbsolutePoint location="358,1034" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,ware.list,/apps/equipment/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="459,65" />
+      <AbsolutePoint location="326,65" />
+      <AbsolutePoint location="326,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/ajax.do,message,/common/ajaxHtml.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="171,138" />
+      <AbsolutePoint location="171,350" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vote.do,vote.list,/apps/vote/listVotes.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="309,326" />
+      <AbsolutePoint location="35,326" />
+      <AbsolutePoint location="35,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,ware.form,/apps/equipment/form.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="729,74" />
+      <AbsolutePoint location="867,74" />
+      <AbsolutePoint location="867,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,ware.home,/apps/equipment/indexPage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="729,14" />
+      <AbsolutePoint location="1135,14" />
+      <AbsolutePoint location="1135,188" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/vote.do,vote.view,/apps/vote/viewVote.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="561,326" />
+      <AbsolutePoint location="806,326" />
+      <AbsolutePoint location="806,470" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/share.do,share.list,/apps/share/shareList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="519,608" />
+      <AbsolutePoint location="661,608" />
+      <AbsolutePoint location="661,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,fav.list,/apps/equipment/favList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="729,44" />
+      <AbsolutePoint location="1029,44" />
+      <AbsolutePoint location="1029,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/equipment.do,ware.manageList,/apps/equipment/manageList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="594,0" />
+      <AbsolutePoint location="594,-75" />
+      <AbsolutePoint location="1343,-75" />
+      <AbsolutePoint location="1343,450" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/share.do,share.home,/apps/share/shareIndexPage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="390,652" />
+      <AbsolutePoint location="390,752" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

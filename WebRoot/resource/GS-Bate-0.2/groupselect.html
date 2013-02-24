@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="shortcut icon" href="favicon.ico" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>GS下拉选择框</title>
+
+<script src="./scripts/jquery-1.3.2.min.js" language="JavaScript" type="text/javascript"></script>
+<script src="./scripts/groupselect.js" language="JavaScript" type="text/javascript"></script>
+<link href="./styles/groupselect.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+<!--
+body {
+	background: #555753;
+	font-family: "隶书", "幼圆", "Lucida Grande", "Lucida Sans Unicode", verdana, lucida,
+		helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+	color: #000;
+}
+
+#container {
+position: relative;
+background: #C0C0C0;
+margin: 20px auto;
+padding: 0px;
+width: 700px;
+border: 5px solid #fff;
+}
+
+#footer {
+margin: 25px 0 0 0;
+background: transparent url(./images/app/footer.jpg) top left no-repeat;
+height: 1.5em;
+text-align: center;
+border-top: 1px solid #fff;
+}
+
+#pageHeader {
+	background: url(./images/app/al-groupselect-logo.jpg) top left no-repeat;
+	height: 200px;
+	margin: 0;
+	border-bottom: 5px solid #fff;
+	}
+
+p {
+font-size: 12px;
+padding: 5px 5px 10px 5px;
+margin: 0;
+line-height: 16px;
+}
+
+a, a:link, a:visited {
+color: #369;
+text-decoration: underline;
+font-weight: normal;
+}
+
+a:hover {
+color: #fff;
+text-decoration: none;
+font-weight: normal;
+}
+
+#supportingText h3{
+margin: 10px 0 0 0;
+padding: 0;
+width: 700px;
+height: 30px;
+text-align: center;
+border: 1px solid #fff;
+}
+
+-->
+</style>
+<script language="JavaScript" type="text/javascript" >
+	
+$(document).ready(function(){  		
+  getstaticdata = gs_groupselect(staticParameters);		
+  //getactivedata = gs_groupselect(activeParameters);	
+							
+});
+
+var getactivedata; //取结果	
+var getstaticdata; //取结果	
+
+var activeParameters = gs_getGSParameters();
+
+//详细参数请见js！
+//在默认参数的基础上自定义参数
+$(activeParameters).attr(
+		{'frameId':'al-groupselect-active',
+		 'needactive':true,
+		 'ajaxRequestUrl':{'group':'/groupServlet','item':'/itemServlet','active':'/activeServlet'}		
+});
+
+var staticParameters = gs_getGSParameters();
+//在默认参数的基础上自定义参数
+$(staticParameters).attr(
+		{'frameId':'al-groupselect-static',
+		 'edit':{'need':true,'gid':'234234','item':[{'id':'3634','name':'边峰'},{'id':'123123','name':'艳'}	]},
+		 'canseldiffitem':false,	
+		 'groupInfo':{'divId':'al-groupinfo-static','gid':'gid','gname':'gname'},
+		 'needactive':true,
+		 'getStaticData':{'activeData':getActiveData,'groupData':getGroupData,'itemData':getItemData}
+});
+
+function getActiveData(text){//没有使用text参数
+	return [{'id':'3634','name':'边峰'},{'id':'123123','name':'艳'},{'id':'1349195','name':'勇'},	{'id':'12323','name':'婷'}];
+}
+
+function getItemData(id){//没有使用id参数
+	return [{'id':'3345','name':'边峰'},{'id':'3466','name':'艳'},{'id':'35345','name':'勇'},	{'id':'345345','name':'婷'},	{'id':'345','name':'亮'},{'id':'678867','name':'郭梅'},{'id':'678668','name':'何'},{'id':'67867','name':'侯'}];
+}
+
+function getGroupData(){
+	return [{'id':'all','name':'全部好友'},	{'id':'234','name':'现在同事'},{'id':'23452','name':'以前同事'},{'id':'24','name':'大学同学'},{'id':'234234','name':'高中同学'},{'id':'235423','name':'家人亲戚'},{'id':'23434','name':'普通朋友'}];
+}
+
+function getresultactive(){
+	alert('你选的是： ' + getactivedata());
+}
+function getresultstatic(){
+	alert('你选的是： ' + getstaticdata());
+}	
+function info(){
+	alert('Group Id: ' + $('#al-groupinfo-static').attr(staticParameters.groupInfo.gid) + '\n'
+		+ 'Group Name: ' + $('#al-groupinfo-static').attr(staticParameters.groupInfo.gname));
+}
+</script>
+
+</head>
+<body>
+
+<div id='container' >
+
+		<div id="pageHeader"></div>
+
+		<div id="supportingText">
+
+		<h1><span><a href="http://code.google.com/p/groupselect/">Project Code</a></span></h1>
+		
+		
+		<h3><span>通过Ajax动态获取数据</span></h3>
+		<div id="al-groupselect-active"></div>
+		<a href='' onclick="getresultactive();" >结果</a>
+
+		<h3><span>编辑状态,只能选取相同组中的项目,同步显示组信息于指定DIV</span></h3>
+		<div id="al-groupinfo-static"></div>
+		<a href='' onclick="info();" >结果</a>
+		<div id="al-groupselect-static"></div>
+		<a href='' onclick="getresultstatic();" >结果</a>
+
+		</div>
+
+		<div id="footer"><p><span>Powered by：alzhang. 2009</span></p></div>
+
+</div>
+
+
+</body>
+</html>
+

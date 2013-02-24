@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="adminForm"
+			type="org.net9.bbs.web.struts.form.AdminForm" />
+		<form-bean name="userForm"
+			type="org.net9.bbs.web.struts.form.UserForm" />
+	</form-beans>
+
+	<global-exceptions />
+
+	<global-forwards>
+		<forward name="error" path="/common/error.jsp" />
+		<forward name="message" path="/common/ajaxHtml.jsp"
+			redirect="false">
+		</forward>
+	</global-forwards>
+
+	<action-mappings>
+
+		<!--	首页action -->
+		<action path="/index"
+			type="org.net9.core.web.struts.action.IndexPageAction"
+			scope="request" parameter="method" unknown="false" validate="true">
+			<forward name="index" path="/indexPage.jsp"
+				redirect="false">
+			</forward>
+		</action>
+
+		<!--	用户个人主页action -->
+		<action path="/userPage"
+			type="org.net9.core.web.struts.action.UserPageAction" scope="request"
+			validate="true">
+			<forward name="view.page" path="/user/page.jsp"
+				redirect="false">
+			</forward>
+		</action>
+		<!--	用户action -->
+		<action path="/user"
+			type="org.net9.core.web.struts.action.UserAction" scope="request"
+			parameter="method" unknown="false" validate="true">
+			<forward name="list.friend" path="/user/friendList.jsp"
+				redirect="false">
+			</forward>
+			<forward name="list.topics" path="/user/topics.jsp"
+				redirect="false">
+			</forward>
+			<forward name="list.onlines" path="/core/onlines.jsp"
+				redirect="false">
+			</forward>
+			<forward name="list.guests" path="/core/guests.jsp"
+				redirect="false">
+			</forward>
+			<forward name="list.search" path="/user/search.jsp"
+				redirect="false">
+			</forward>
+			<forward name="list.msg" path="/message/listMsgs.jsp"
+				redirect="false">
+			</forward>
+			<forward name="user.invite" path="/core/inviteFriend.jsp"
+				redirect="false">
+			</forward>
+			<forward name="user.timeline" path="/core/timeline.jsp"
+				redirect="false">
+			</forward>
+			<forward name="user.timeline.friend" path="/core/friendTimeline.jsp"
+				redirect="false">
+			</forward>
+		</action>
+
+		<action path="/userExt"
+			type="org.net9.core.web.struts.action.RegisterAction" scope="request"
+			parameter="method" unknown="false" validate="true" name="userForm">
+			<forward name="user.reg" path="/user/reg.jsp"
+				redirect="false">
+			</forward>
+			<forward name="user.reg.succeed" path="/user/regSucceed.jsp"
+				redirect="false">
+			</forward>
+			<forward name="user.forget" path="/user/forgetPassword.jsp"
+				redirect="false">
+			</forward>
+			<forward name="user.resetPassword"
+				path="/user/resetPassword.jsp" redirect="false">
+			</forward>
+		</action>
+
+		<!--	rss action -->
+		<action path="/rss"
+			type="org.net9.core.web.struts.action.RssProxyAction" scope="request"
+			parameter="method" unknown="false" validate="true">
+		</action>
+
+	</action-mappings>
+	<message-resources parameter="ApplicationResources">
+	</message-resources>
+</struts-config>
+

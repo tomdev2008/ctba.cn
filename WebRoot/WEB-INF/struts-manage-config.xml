@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+
+	<action-mappings>
+		<!--	管理action -->
+		<action path="/manage/manage"
+			type="org.net9.core.web.struts.action.ManageAction" name="noticeForm"
+			scope="request" parameter="method" unknown="false" validate="true">
+			<forward name="manage.listBoards"
+				path="/manage/bbs/manageBoards.jsp" redirect="false" />
+			<forward name="manage.listReplies"
+				path="/manage/bbs/listReplies.jsp" redirect="false" />
+			<forward name="manage.listTopics"
+				path="/manage/bbs/listTopics.jsp" redirect="false" />
+			<forward name="manage.bms" path="/manage/bbs/bms.jsp"
+				redirect="false" />
+			<forward name="vote.list" path="/manage/bbs/listVotes.jsp"
+				redirect="false" />
+			<forward name="manage.login" path="/manage/login.jsp"
+				redirect="false" />
+			<forward name="manage.users" path="/manage/listUsers.jsp"
+				redirect="false" />
+			<forward name="manage.forbiddens"
+				path="/manage/bbs/listForbiddens.jsp" redirect="false" />
+			<forward name="manage.blackList"
+				path="/manage/listBlacks.jsp" redirect="false" />
+			<forward name="manage.timeline.list"
+				path="/manage/sys/timelineList.jsp" redirect="false" />
+			<forward name="manage.feedback.list"
+				path="/manage/sys/feedbackList.jsp" redirect="false" />
+			<forward name="manage.cacheinfo"
+				path="/manage/sys/cacheInfo.jsp" redirect="false" />
+		</action>
+
+		<!--	管理登录action -->
+		<action path="/manage/manageLogin"
+			type="org.net9.core.web.struts.action.ManageLoginAction"
+			name="adminForm" scope="request" validate="true">
+			<forward name="manage.listBoards"
+				path="/manage/manage.do?method=listBoards" redirect="true" />
+			<forward name="manage.login" path="/manage/login.jsp"
+				redirect="false" />
+		</action>
+
+		<!--	Subject 管理 action -->
+		<action path="/manage/subManage"
+			type="org.net9.subject.web.struts.action.SubjectManageAction"
+			name="subjectForm" scope="request" parameter="method" unknown="false"
+			validate="true">
+			<forward name="sub.list"
+				path="/manage/subject/listSubjects.jsp" redirect="false" />
+			<forward name="sub.form"
+				path="/manage/subject/subjectForm.jsp" redirect="false" />
+			<forward name="sub.topic.list"
+				path="/manage/subject/listSubjectTopics.jsp" redirect="false" />
+			<forward name="sub.topic.form"
+				path="/manage/subject/subjectTopicForm.jsp" redirect="false" />
+			<forward name="sub.template.list"
+				path="/manage/subject/listSubjectTemplates.jsp" redirect="false" />
+			<forward name="sub.comment.list"
+				path="/manage/subject/listSubjectComments.jsp" redirect="false" />
+			<forward name="sub.template.form"
+				path="/manage/subject/subjectTemplateForm.jsp" redirect="false" />
+		</action>
+
+		<!--	Group 管理 action -->
+		<action path="/manage/groupManage"
+			type="org.net9.group.web.struts.action.GroupManageAction"
+			scope="request" parameter="method" unknown="false" validate="true">
+			<forward name="group.list"
+				path="/manage/group/listGroups.jsp" redirect="false" />
+			<forward name="group.topic.list"
+				path="/manage/group/listGroupTopics.jsp" redirect="false" />
+			<forward name="group.user.list"
+				path="/manage/group/listGroupUsers.jsp" redirect="false" />
+			<forward name="group.img.list"
+				path="/manage/group/listImages.jsp" redirect="false" />
+			<forward name="group.act.list"
+				path="/manage/group/listActivities.jsp" redirect="false" />
+			<forward name="group.form"
+				path="/manage/group/groupForm.jsp" redirect="false" />
+		</action>
+
+		<!--	Blog 管理 action -->
+		<action path="/manage/blogManage"
+			type="org.net9.blog.web.struts.action.BlogManageAction"
+			scope="request" parameter="method" unknown="false" validate="true">
+			<forward name="blog.list" path="/manage/blog/listBlogs.jsp"
+				redirect="false" />
+			<forward name="comment.list"
+				path="/manage/listBlogComments.jsp" redirect="false" />
+			<forward name="entry.list"
+				path="/manage/blog/listEntries.jsp" redirect="false" />
+			<forward name="link.list"
+				path="/manage/blog/listBlogLinks.jsp" redirect="false" />
+			<forward name="cat.list"
+				path="/manage/blog/listBlogCats.jsp" redirect="false" />
+			<forward name="vest.list" path="/manage/blog/listVests.jsp"
+				redirect="false" />
+			<forward name="entry.form" path="/manage/blog/entryForm.jsp"
+				redirect="false" />
+		</action>
+
+		<!--	News 管理 action -->
+		<action path="/manage/newsManage"
+			type="org.net9.news.web.struts.action.NewsManageAction"
+			scope="request" parameter="method" unknown="false" validate="true">
+			<forward name="news.list" path="/manage/news/listNewses.jsp"
+				redirect="false" />
+			<forward name="news.form" path="/manage/news/newsForm.jsp"
+				redirect="false" />
+			<forward name="cat.list"
+				path="/manage/news/listNewsCats.jsp" redirect="false" />
+			<forward name="post.list" path="/manage/news/listPosts.jsp"
+				redirect="false" />
+			<forward name="comment.list"
+				path="/manage/news/listNewsComments.jsp" redirect="false" />
+		</action>
+
+		<!--	admin 管理 action -->
+		<action path="/manage/sysAdmin"
+			type="org.net9.core.web.struts.action.SystemAdminAction"
+			scope="request" parameter="method" unknown="false" validate="true">
+			<forward name="admin.list" path="/manage/listAdmins.jsp"
+				redirect="false" />
+			<forward name="admin.password" path="/manage/modifyPass.jsp"
+				redirect="false" />
+			<forward name="admin.form" path="/manage/adminForm.jsp"
+				redirect="false" />
+			<forward name="group.list" path="/manage/listSysGroups.jsp"
+				redirect="false" />
+			<forward name="group.form" path="/manage/groupForm.jsp"
+				redirect="false" />
+		</action>
+
+
+		<!--	email 管理 action -->
+		<action path="/manage/emailManage"
+			type="org.net9.core.web.struts.action.EmailAction" scope="request"
+			parameter="method" unknown="false" validate="true">
+			<forward name="email.form"
+				path="/manage/email/emailForm.jsp" redirect="false" />
+			<forward name="email.inbox"
+				path="/manage/email/emailInbox.jsp" redirect="false" />
+			<forward name="email.sent"
+				path="/manage/email/emailSentList.jsp" redirect="false" />
+			<forward name="email.setting"
+				path="/manage/email/emailSetting.jsp" redirect="false" />
+		</action>
+	</action-mappings>
+
+</struts-config>
+

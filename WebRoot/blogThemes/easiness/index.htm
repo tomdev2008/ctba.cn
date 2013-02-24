@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>CTBA BLOG THEME</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="alternate" type="application/rss+xml" title="RSS 2.0"
+			href="#" />
+		<link href="css.css" rel="stylesheet" type="text/css" />
+		<script>if (top.location != self.location) {top.location=self.location;}</script>
+		<script type="text/javascript">
+function showHideSidebar(){
+	try{
+	if (!document.getElementById) return false;
+	if (!document.getElementById("outerSidebar")) return false;
+	if (!document.getElementById("content")) return false;
+	var objSidebar = document.getElementById("outerSidebar");
+	var objContent = document.getElementById("content");
+	var objDiv = document.getElementById("content").getElementsByTagName("div");
+	if(objSidebar.className != "outerSidebar-hide"){
+		objSidebar.className = "outerSidebar-hide";
+		objContent.className = "content-wide";
+	}else{
+		objSidebar.className = "outerSidebar";
+		objContent.className="content";
+	}
+	}catch(e){}
+}
+</script>
+		<script type="text/javascript">
+function prepareZoom() {
+	if (!document.getElementById) return false;
+	if (!document.getElementById("zoom")) return false;
+	var zoom = document.getElementById("zoom");
+	var links = zoom.getElementsByTagName("a");
+	links[0].onclick = function() {
+		zoomOut();
+	}
+	links[1].onclick = function() {
+		zoomReset();
+	}
+	links[2].onclick = function() {
+		zoomIn();
+	}
+}
+window.onload=prepareZoom
+var size = 75;
+function zoomIn() {
+	if (!document.getElementById) return false;
+	if (!document.getElementById("content")) return false;
+	size += 10;
+	document.getElementById("content").style.fontSize = size+'%';
+}
+function zoomOut() {
+	if (!document.getElementById) return false;
+	if (!document.getElementById("content")) return false;
+	size -= 10;
+	document.getElementById("content").style.fontSize = size+'%';
+}
+function zoomReset() {
+	if (!document.getElementById) return false;
+	if (!document.getElementById("content")) return false;
+	size = 75;
+	document.getElementById("content").style.fontSize = size+'%';
+}
+
+</script>
+		<!--[if lte IE 6]>
+
+<style type="text/css">
+ /* ie png hack */
+
+.sideTop { background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src=http://public.blogbus.com/blogbus/skin/5115/sidebarTop.png); }
+.sideBottom { background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src=http://public.blogbus.com/blogbus/skin/5115/sidebarBtm.png); }
+#sidebar { background-image: none; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, src=http://public.blogbus.com/blogbus/skin/5115/sidebar.png, sizingMethod=scale); }
+</style>
+
+<![endif]-->
+	</head>
+	<body>
+		<div id="index">
+			<div id="container">
+				<div id="hide">
+					<a href="#" onclick="showHideSidebar();">sidebar 隐藏/显示</a>
+				</div>
+				<div id="header">
+					<h1 class="blogName">
+						<a href="#" title="#">Mockee Labs</a>
+					</h1>
+					<div class="description">
+						Kaavie!
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div id="innerContainer">
+					<div class="innerTop"></div>
+					<div id="outerContent">
+						<div id="content" class="content">
+							<div class="contentTop"></div>
+							<ul id="posts">
+								<div class="postsTop"></div>
+								<li>
+									<div class="postHeader">
+										<h3>
+											2008-04-02
+										</h3>
+										<h2>
+											<a href="http://mockee.blogbus.com/logs/18096354.html">这里是标题这里是标题这里是标题</a><span
+												class="category"> - [<a href="#">分类名称</a>]</span>
+										</h2>
+									</div>
+									<div class="clear"></div>
+									<div class="postBody">
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+										这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容，这里是内容这里是内容这里是内容这里是内容。这里是内容这里是内容这里是内容这里是内容
+										这里是内容；这里是内容这里是内容这里是内容，这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容这里是内容。这里是内容这里是内
+										容这里是内容。
+										<br />
+										<br />
+										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 这里是内容这里是内容这里是内容这里是内容这里是内容这...
+										<div class="clear"></div>
+									</div>
+									<div class="postFooter">
+										<div class="tags">
+											Tag：
+										</div>
+										<div class="menubar">
+											<span class="author"><a href="#">mockee</a>
+											</span> 发表于
+											<span class="time">02:43:01</span> |
+											<a href="#" class="readmore">阅读全文</a> |
+											<a href="#" class="cmt">评论 <span class="count">0</span>
+											</a> |
+											<a href="#" class="edit">编辑</a>
+										</div>
+									</div>
+								</li>
+								<div class="postsBottom"></div>
+							</ul>
+							<div class="pageNavi">
+								共1页
+								<span>1</span>
+							</div>
+							<div class="contentBottom"></div>
+						</div>
+					</div>
+					<div id="outerSidebar">
+						<div class="sideTop"></div>
+						<div id="sidebar">
+							<div id="zoom">
+								text size:
+								<a href="#">-</a>
+								<a href="#">reset</a>
+								<a href="#">+</a>
+							</div>
+							<div id="meta" class="module">
+								<div class="modTop"></div>
+								<div class="modBody">
+								</div>
+								<div class="modBottom"></div>
+							</div>
+						</div>
+						<div class="sideBottom"></div>
+					</div>
+					<div class="innerBottom"></div>
+					<div class="clear"></div>
+					<div id="footer">
+						<div class="copyright"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

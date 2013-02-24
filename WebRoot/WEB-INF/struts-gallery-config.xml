@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+<struts-config>
+	<form-beans>
+		<form-bean name="imageFileForm"
+			type="org.net9.gallery.web.struts.form.MultiImageFileForm" />
+	</form-beans>
+	<action-mappings>
+
+		<!--	多图片上传action-->
+		<action path="/multiImgUpload"
+			type="org.net9.gallery.web.struts.action.MultiImageUploadAction"
+			parameter="method" name="imageFileForm" scope="request"
+			validate="true">
+			<forward name="form" path="/gallery/imgForm.jsp"
+				redirect="false" />
+			<forward name="form.mini" path="/gallery/miniForm.jsp"
+				redirect="false" />
+		</action>
+
+		<!--	Image action-->
+		<action path="/img"
+			type="org.net9.gallery.web.struts.action.ImageAction" scope="request"
+			parameter="method" name="imgForm" unknown="false" validate="true">
+			<forward name="img.list" path="/group/imgList.jsp"
+				redirect="false">
+			</forward>
+			<forward name="img.form" path="/group/imgForm.jsp"
+				redirect="false">
+			</forward>
+			<forward name="img.view" path="/gallery/imgView.jsp"
+				redirect="false">
+			</forward>
+			<forward name="gallery.face" path="/gallery/faceList.jsp"
+				redirect="false">
+			</forward>
+			<forward name="gallery.list" path="/gallery/galleryList.jsp"
+				redirect="false">
+			</forward>
+			<forward name="gallery.form" path="/gallery/galleryForm.jsp"
+				redirect="false">
+			</forward>
+			<forward name="gallery.view" path="/gallery/galleryView.jsp"
+				redirect="false">
+			</forward>
+			<forward name="gallery.home" path="/gallery/indexPage.jsp"
+				redirect="false">
+			</forward>
+			<forward name="gallery.view.mini"
+				path="/gallery/miniList.jsp" redirect="false">
+			</forward>
+			<forward name="image.frame.mini"
+				path="/gallery/miniFrame.jsp" redirect="false">
+			</forward>
+			<forward name="img.view.group" path="/group/imgView.jsp"
+				redirect="false">
+			</forward>
+		</action>
+
+		<!--	Image Upload action-->
+		<action path="/imgUpload"
+			type="org.net9.gallery.web.struts.action.GroupImageUploadAction"
+			name="imageFileForm" scope="request" parameter="method"
+			unknown="false" validate="true">
+			<forward name="img.list" path="/group/imgList.jsp"
+				redirect="false">
+			</forward>
+			<forward name="img.form" path="/group/imgForm.jsp"
+				redirect="false">
+			</forward>
+		</action>
+
+	</action-mappings>
+
+</struts-config>
+

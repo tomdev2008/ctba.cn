@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/news.do" location="50,450" dimension="251,84" />
+  <StrutsActivity path="/news/newsForm.jsp" location="950,550" dimension="148,48" />
+  <StrutsActivity path="/news/view.jsp" location="50,750" dimension="124,48" />
+  <StrutsActivity path="/news/indexPage.jsp" location="350,50" dimension="154,48" />
+  <StrutsActivity path="/news/search.jsp" location="650,450" dimension="136,48" />
+  <StrutsActivity path="/news/list.jsp" location="950,650" dimension="124,48" />
+  <StrutsActivity path="/group/noticeList.jsp" location="0,294" dimension="136,48" />
+  <StrutsActivity path="/group/groupFrame.jsp" location="236,294" dimension="146,48" />
+  <StrutsActivity path="/group/memberForm.jsp" location="482,294" dimension="152,48" />
+  <StrutsActivity path="/group/myGroups.jsp" location="734,294" dimension="137,48" />
+  <StrutsActivity path="/group/shareList.jsp" location="971,294" dimension="133,48" />
+  <StrutsActivity path="/group/noticeForm.jsp" location="1204,294" dimension="143,48" />
+  <StrutsActivity path="/group/joinGroup.jsp" location="1447,294" dimension="134,48" />
+  <StrutsActivity path="/group/shareView.jsp" location="1681,294" dimension="139,48" />
+  <StrutsActivity path="/group/indexPage.jsp" location="1920,294" dimension="138,48" />
+  <StrutsActivity path="/group/shareForm.jsp" location="2158,294" dimension="140,48" />
+  <StrutsActivity path="/group/leaveGroup.jsp" location="2398,294" dimension="143,48" />
+  <StrutsActivity path="/group/noticeView.jsp" location="2641,294" dimension="142,48" />
+  <StrutsActivity path="/group/imgForm.jsp" location="0,621" dimension="130,48" />
+  <StrutsActivity path="/group/imgView.jsp" location="294,621" dimension="129,48" />
+  <StrutsActivity path="/group/imgList.jsp" location="594,621" dimension="123,48" />
+  <StrutsActivity path="/news/post.jsp" location="950,450" dimension="124,48" />
+  <StrutsActivity path="/news/catList.jsp" />
+  <StrutsTransition id="/news.do,news.cat.list,/news/catList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="175,492" />
+      <AbsolutePoint location="0,0" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,news.list,/news/list.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="205,534" />
+      <AbsolutePoint location="205,684" />
+      <AbsolutePoint location="950,684" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,news.search,/news/search.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="301,483" />
+      <AbsolutePoint location="650,483" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,news.indexPage,/news/indexPage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="175,450" />
+      <AbsolutePoint location="175,74" />
+      <AbsolutePoint location="350,74" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,news.view,/news/view.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="159,534" />
+      <AbsolutePoint location="159,750" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/news.do,news.post,/news/newsForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="301,513" />
+      <AbsolutePoint location="1024,513" />
+      <AbsolutePoint location="1024,550" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

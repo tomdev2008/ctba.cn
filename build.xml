@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="Ctba" basedir="." default="compile">
+
+	<property file="build.properties" />
+
+	<path id="compile.classpath">
+		<fileset dir="${lib.dir}" includes="*.jar" />
+		<fileset dir="contrib" includes="*.jar" />
+	</path>
+
+	<target name="init">
+		<tstamp>
+			<format property="TODAY" pattern="yyyy/MM/dd" />
+		</tstamp>
+		<echo>===========================</echo>
+		<echo>Ant version: ${ant.version}</echo>
+		<echo>Java version: ${ant.java.version}</echo>
+		<echo>Project name: ${ant.project.name}</echo>
+		<echo>BaseDir: ${basedir}</echo>
+		<echo>Date: ${TODAY}</echo>
+		<echo>===========================</echo>
+	</target>
+
+	<target name="clean" depends="init" description="清除临时目录">
+		<echo>Cleaning build and dist</echo>
+		<!--delete>
+			<fileset dir="${build.dir.classes}" />
+		</delete-->
+	</target>
+
+	<target name="compile" depends="clean" description="编译源文件">
+		<echo>Compiling ...</echo>
+		<mkdir dir="${build.dir.classes}" />
+		<javac srcdir="${src.root}" destdir="${build.dir.classes}" debug="true" classpathref="compile.classpath" deprecation="on" fork="no" verbose="false" failonerror="false" optimize="true">
+			<compilerarg line="-encoding UTF-8 " />
+		</javac>
+		<echo>Copy resources ...</echo>
+		<delete>
+			<fileset dir="${build.dir.classes}" includes="${build.resource}" />
+		</delete>
+		<copy todir="${build.dir.classes}">
+			<fileset dir="${src.conf}" includes="${build.resource}" />
+		</copy>
+		<!--native2ascii src="${src.conf}" dest="${build.dir.classes}" includes="**/*.properties" encoding="UTF-8" /-->
+	</target>
+
+	<target name="deploy" depends="compile" description="发布到WEB容器">
+		<delete>
+			<fileset dir="${dist.dir.deploy}" excludes="${deploy.ignore}">
+			</fileset>
+		</delete>
+		<copy todir="${dist.dir.deploy}">
+			<fileset dir="${build.dir.web}" excludes="${deploy.ignore}" />
+		</copy>
+	</target>
+
+	<target name="package" depends="compile" description="打成WAR包">
+		<delete file="${dist.war}">
+		</delete>
+		<echo>Packaging war ...</echo>
+		<war destfile="${dist.war}" webxml="${webapp.dir.docbase}/WEB-INF/web.xml" compress="true">
+			<metainf dir="${dist.dir}" />
+			<fileset dir="${webapp.dir.docbase}" />
+			<webinf dir="${webapp.dir.webinf}" />
+			<classes dir="${build.dir.classes}" />
+			<lib dir="${lib.dir}" />
+		</war>
+	</target>
+
+	<target name="package.jar" depends="compile" description="打成JAR包">
+		<!--delete file="${dist.backend.jar}">
+        </delete-->
+		<mkdir dir="dist" />
+		<echo>Packaging jar ...</echo>
+		<jar destfile="${dist.backend.jar}" basedir="${build.dir.classes}" excludes="${deploy.ignore}">
+		</jar>
+	</target>
+
+	<target name="deploy.jar" depends="package.jar" description="发布到WEB容器,后台发布为.jar文件">
+		<mkdir dir="${dist.dir.deploy}" />
+		<delete>
+			<fileset dir="${dist.dir.deploy}" excludes="${deploy.ignore}">
+			</fileset>
+		</delete>
+		<copy todir="${dist.dir.deploy}">
+			<fileset dir="${build.dir.web}" excludes="WEB-INF/classes/**" />
+		</copy>
+		<copy todir="${dist.dir.deploy}/WEB-INF/lib" file="${dist.backend.jar}">
+		</copy>
+		<copy todir="${dist.dir.deploy}/WEB-INF/classes">
+			<fileset dir="${src.conf}" includes="${build.resource}" excludes="${deploy.ignore}" />
+		</copy>
+	</target>
+
+	<!--target name="2xiaonei-app" depends="package.jar" description="发布到ctba-xiaonei application">
+		<copy todir="../ctbaXiaoneiApp/WebRoot/WEB-INF/lib" file="${dist.backend.jar}">
+		</copy>
+	</target-->
+
+	<target name="deploy.2-ctbabatch" depends="package.jar" description="发布到ctba-batch application">
+		<copy todir="../ctbaBatch/lib" file="${dist.backend.jar}">
+		</copy>
+	</target>
+
+
+	<target name="compress.js" description="压缩Javascript">
+		<java fork="yes" failonerror="yes" classname="org.net9.tools.compress.JsMinCompresser" classpathref="compile.classpath">
+			<arg line="WebRoot/javascript/src/_cookie.js
+						WebRoot/javascript/src/_modalMessageUtils.js 
+						WebRoot/javascript/src/_utils.js 
+						WebRoot/javascript/src/_common.js 
+						WebRoot/javascript/src/_page.js 
+						WebRoot/javascript/src/_loginForm.js 
+				        WebRoot/javascript/src/_json.js 
+						WebRoot/javascript/j2bb-3.8.js " />
+		</java>
+
+		<java fork="yes" failonerror="yes" classname="org.net9.tools.compress.JsMinCompresser" classpathref="compile.classpath">
+			<arg line="WebRoot/javascript/src/_ubbEditor.js
+								WebRoot/javascript/j2bb-editor-3.8.js " />
+		</java>
+
+		<java fork="yes" failonerror="yes" classname="org.net9.tools.compress.JsMinCompresser" classpathref="compile.classpath">
+			<arg line="WebRoot/resource/nicEdit/nicEdit.js
+										WebRoot/javascript/j2bb-nice-editor.js " />
+		</java>
+		
+		<java fork="yes" failonerror="yes" classname="org.net9.tools.compress.JsMinCompresser" classpathref="compile.classpath">
+			<arg line="WebRoot/resource/GS-Bate-0.2/scripts/groupselect.js
+										WebRoot/javascript/userselector.js " />
+		</java>
+
+		<java fork="yes" failonerror="yes" classname="org.net9.tools.compress.JsMinCompresser" classpathref="compile.classpath">
+			<arg line="WebRoot/javascript/calendar/calendar.js
+						WebRoot/javascript/calendar/calendar-zh.js
+						WebRoot/javascript/calendar/calendar-setup.js
+										WebRoot/javascript/j2bb-calendar.js " />
+		</java>
+
+	</target>
+
+
+	<target name="compress.css" description="压缩Css">
+		<java fork="yes" failonerror="yes" classname="org.net9.tools.compress.ExtCompresser" classpathref="compile.classpath">
+			<arg line="WebRoot/theme/default/css/src/reset.css
+				WebRoot/theme/default/css/src/grid.css
+				WebRoot/theme/default/css/src/typography.css
+				WebRoot/theme/default/css/src/forms.css 
+				WebRoot/theme/default/css/src/widget.css 
+				WebRoot/theme/default/css/src/hackie.css
+				WebRoot/theme/default/css/general.css" />
+		</java>
+	</target>
+
+	<patternset id="java.files.pattern" includes="**/*.java" />
+
+	<property name="checkstyle.data.file" location="doc/checkstyle.xml" />
+	<property name="checkstyle.report.file" location="doc/checkstyle.html" />
+	<property name="checkstyle.xsl.file" location="contrib/checkstyle-noframes.xsl" />
+	<taskdef resource="checkstyletask.properties" classpath="contrib/checkstyle-all-5.0-beta01.jar" />
+	<property name="translation.severity" value="ignore" />
+	<property name="checkstyle.header.file" location="java.header" />
+
+	<target name="checkstyle" description="Check code style for compliance with coding standards">
+		<checkstyle config="contrib/sun_checks.xml" failOnViolation="false" failureProperty="checkstyle.failure" classpath="contrib/*.jar">
+			<fileset dir="src" includes="**/*.java">
+				<patternset refid="java.files.pattern" />
+			</fileset>
+			<formatter type="xml" toFile="${checkstyle.data.file}" />
+		</checkstyle>
+		<xslt in="${checkstyle.data.file}" out="${checkstyle.report.file}" style="${checkstyle.xsl.file}" />
+		<delete file="${checkstyle.data.file}" />
+	</target>
+
+	<target name="test.init.database" depends="compile" description="初始化测试数据库">
+		<echo>Initiallizing db...</echo>
+		<java fork="yes" failonerror="yes" classname="org.net9.test.TestContextInitializer">
+			<classpath refid="compile.classpath" />
+			<classpath>
+				<pathelement location="${build.dir.classes}" />
+			</classpath>
+			<jvmarg line="-DCTBA_DB_TYPE=${database.type}" />
+		</java>
+	</target>
+
+	<target name="test.junit" depends="compile" description="Run unit test">
+		<echo>UnitTesting...</echo>
+		<mkdir dir="${reports.dir}" />
+		<mkdir dir="${reports.dir.html}" />
+		<delete dir="${reports.dir}" includes="TEST-*.xml" />
+		<junit printsummary="yes" haltonfailure="no" fork="true">
+			<jvmarg line="-noverify" />
+			<classpath>
+				<pathelement location="${build.dir.classes}" />
+				<!--pathelement location="${class.instrumented.dir}" /-->
+			</classpath>
+
+			<classpath refid="compile.classpath" />
+
+			<formatter type="xml" />
+			<batchtest fork="yes" todir="${reports.dir}">
+				<fileset dir="${src.test}">
+					<include name="**/*Test.java" />
+				</fileset>
+			</batchtest>
+		</junit>
+
+		<junitreport todir="${reports.dir}">
+			<fileset dir="${reports.dir}">
+				<include name="TEST-*.xml" />
+			</fileset>
+			<report format="frames" todir="${reports.dir.html}" />
+		</junitreport>
+	</target>
+
+	<!--typedef resource="org/tigris/subversion/svnant/svnantlib.xml"
+           classpathref="compile.classpath"/-->
+
+	<taskdef name="svn" classpathref="compile.classpath" classname="org.tigris.subversion.svnant.SvnTask" />
+
+	<target name="svn.log">
+
+		<svn username="${svn.username}" password="${svn.password}">
+			<log url="${svn.url}" destfile="doc/history.xml" asxml="true">
+			</log>
+		</svn>
+
+	</target>
+
+	<target name="svn.svnstat">
+		<delete dir="doc/report/svnstat/" />
+		<java classname="de.agentlab.svnstat.SvnStat" fork="yes">
+			<arg line="-r doc/history.xml" />
+			<arg line="-d doc/report/svnstat" />
+			<classpath>
+				<pathelement path="contrib/SvnStat-all.jar" />
+			</classpath>
+		</java>
+	</target>
+
+	<target name="javadoc" depends="init">
+		<javadoc windowtitle="Ctba system javadoc" destdir="doc/javadoc" author="true" version="true" use="true" classpathref="compile.classpath" encoding="UTF-8" docencoding="UTF-8">
+			<packageset dir="${src.root}/core" />
+			<packageset dir="${src.root}/bbs" />
+			<packageset dir="${src.root}/blog" />
+			<packageset dir="${src.root}/app" />
+			<packageset dir="${src.root}/domain" />
+			<packageset dir="${src.root}/gallery" />
+			<packageset dir="${src.root}/group" />
+			<packageset dir="${src.root}/news" />
+			<packageset dir="${src.root}/search" />
+			<packageset dir="${src.root}/subject" />
+		</javadoc>
+	</target>
+
+
+	<target name="gen.jpameta">
+		<property name="jpametainfo.dir" value="scripts/metainfo" />
+		<mkdir dir="${jpametainfo.dir}" />
+		<taskdef name="texen" classname="org.apache.velocity.texen.ant.TexenTask" classpath="contrib/velocity-dep-1.4.jar" />
+		<texen   controlTemplate="persistance.vm" contextProperties="${jpametainfo.dir}/conf/${database.type}.properties" templatePath="${jpametainfo.dir}/" outputDirectory="${jpametainfo.dir}/gen/" outputFile="persistence.xml" />
+		<copy todir="${src.conf}/META-INF" file="${jpametainfo.dir}/gen/persistence.xml"></copy>
+	</target>
+
+</project>

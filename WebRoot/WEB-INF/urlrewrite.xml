@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 2.6//EN" "http://tuckey.org/res/dtds/urlrewrite2.6.dtd">
+<urlrewrite>
+
+	<!--=============== blog ================-->
+
+	<rule>
+		<note>blog offline editor</note>
+		<from>/remote/blog/</from>
+		<to>/xmlrpc.action</to>
+	</rule>
+	
+	<rule>
+		<note>blog category</note>
+		<from>/blog/([0-9]+)/([0-9]+)</from>
+		<to>/bg.action?method=view&amp;bid=$1&amp;cid=$2</to>
+	</rule>
+	<rule>
+		<note>blog summary</note>
+		<from>/blog/([0-9]+)/summary/(\w+)</from>
+		<to>/bg.action?method=view&amp;bid=$1&amp;month=$2</to>
+	</rule>
+	<rule>
+		<note>blog</note>
+		<from>/blog/([0-9]+)</from>
+		<to>/bg.action?method=view&amp;bid=$1</to>
+	</rule>
+	<rule>
+		<note>blog home</note>
+		<from>/blog/home</from>
+		<to>/bhome.action</to>
+	</rule>
+	<rule>
+		<note>blog entry</note>
+		<from>/blog/entry/([0-9]+)</from>
+		<to>/be.action?method=view&amp;eid=$1</to>
+	</rule>
+	<rule>
+		<note>blog entry form</note>
+		<from>/blog/newentry/</from>
+		<to>/be.action?method=form</to>
+	</rule>
+	<rule>
+		<note>user blog home</note>
+		<from>^/blog/</from>
+		<to>/bhome.action</to>
+	</rule>
+	<rule>
+		<note>user blog</note>
+		<from>/([\w]+)/blog/</from>
+		<to>/bg.action?method=view&amp;nick=$1</to>
+	</rule>
+
+
+	<!--=============== news ================-->
+	
+	<rule>
+		<note>news list entry</note>
+		<from>/news/list/([0-9]+)</from>
+		<to>/news.shtml?method=list&amp;cid=$1</to>
+	</rule>
+	<rule>
+		<note>news list</note>
+		<from>/news/list/</from>
+		<to>/news.shtml?method=list</to>
+	</rule>
+	<rule>
+		<note>news entry</note>
+		<from>/news/([0-9]+)</from>
+		<to>/news.shtml?method=view&amp;nid=$1</to>
+	</rule>
+	<rule>
+		<note>news entry(fake url)</note>
+		<from>/news/(\w+)</from>
+		<to>/news.shtml?method=view&amp;fake-url=$1</to>
+	</rule>
+	<rule>
+		<note>news home</note>
+		<from>/news/</from>
+		<to>/news.shtml?method=indexPage</to>
+	</rule>
+
+
+	<!--===============group=================-->
+	
+	<rule>
+		<note>group topic</note>
+		<from>/group/topic/([0-9]+)</from>
+		<to>/gt.action?method=view&amp;tid=$1</to>
+	</rule>
+	<rule>
+		<note>group member</note>
+		<from>/group/members/([0-9]+)</from>
+		<to>/g.action?method=members&amp;gid=$1</to>
+	</rule>
+	<rule>
+		<note>group gallery photo</note>
+		<from>/group/gallery/photo/([0-9]+)</from>
+		<to>/img.shtml?method=groupImageView&amp;id=$1</to>
+	</rule>
+	<rule>
+		<note>group gallery</note>
+		<from>/group/gallery/([0-9]+)</from>
+		<to>/img.shtml?method=groupImageList&amp;gid=$1</to>
+	</rule>
+	<rule>
+		<note>group activity</note>
+		<from>/group/activity/([0-9]+)</from>
+		<to>/activity.shtml?method=view&amp;aid=$1</to>
+	</rule>
+	<rule>
+		<note>group activity</note>
+		<from>/group/activities/([0-9]+)</from>
+		<to>/activity.shtml?method=list&amp;gid=$1</to>
+	</rule>
+	<rule>
+		<note>group activities</note>
+		<from>/group/activities/</from>
+		<to>/activity.shtml?method=listAll</to>
+	</rule>
+	<rule>
+		<note>new group topic</note>
+		<from>/newgrouptopic/([0-9]*)</from>
+		<to>/gt.action?method=form&amp;gid=$1</to>
+	</rule>
+	<rule>
+		<note>my group</note>
+		<from>/group/mine/</from>
+		<to>/group.shtml?method=myGroups</to>
+	</rule>
+	<rule>
+		<note>group with id</note>
+		<from>/group/([0-9]+)</from>
+		<to>/gt.action?method=list&amp;gid=$1</to>
+	</rule>
+	<rule>
+		<note>group with name</note>
+		<from>/group/(\w+)</from>
+		<to>/gt.action?method=list&amp;url=$1</to>
+	</rule>
+	<rule>
+		<note>group home</note>
+		<from>/group/</from>
+		<to>/ghome.action</to>
+	</rule>
+
+
+	<!--=============== bbs ================-->
+
+	<rule>
+		<note>forum</note>
+		<from>/forum/</from>
+		<to>/boardIndexPage.shtml</to>
+	</rule>
+	<rule>
+		<note>topic</note>
+		<from>/topic/([0-9]+)</from>
+		<to>/t.action?tid=$1</to>
+	</rule>
+	<rule>
+		<note>new topic with id</note>
+		<from>/newtopic/([0-9]+)</from>
+		<to>/newTopic.action?bid=$1&amp;method=form</to>
+	</rule>
+	<rule>
+		<note>new topic</note>
+		<from>/newtopic/</from>
+		<to>/newTopic.action?method=form</to>
+	</rule>
+	<rule>
+		<note>board</note>
+		<from>/board/([0-9]+)</from>
+		<to>/b.action?bid=$1</to>
+	</rule>
+	<rule>
+		<note>vote</note>
+		<from>/vote/([0-9]+)</from>
+		<to>/vote.do?method=viewVote&amp;vid=$1</to>
+	</rule>
+	<rule>
+		<note>vote home</note>
+		<from>/vote/</from>
+		<to>/vote.do?method=listVotes</to>
+	</rule>
+
+
+	<!--=============== subject =================-->
+
+	<rule>
+		<note>subject topic</note>
+		<from>/subject/article/([0-9]+)</from>
+		<to>/subject.shtml?method=viewTopic&amp;tid=$1</to>
+	</rule>
+	<rule>
+		<note>subject</note>
+		<from>/subject/([0-9]+)</from>
+		<to>/subject.shtml?method=viewSubject&amp;sid=$1</to>
+	</rule>
+	<rule>
+		<note>subject list with id</note>
+		<from>/subject/list/([0-9]+)</from>
+		<to>/subject.shtml?method=listSubjects&amp;type=$1</to>
+	</rule>
+	<rule>
+		<note>subject list</note>
+		<from>/subject/list/</from>
+		<to>/subject.shtml?method=listSubjects</to>
+	</rule>
+	<rule>
+		<note>subject home</note>
+		<from>/subject/</from>
+		<to>/subject.shtml?method=indexPage</to>
+	</rule>
+
+
+	<!--=============== user ================-->
+
+	<rule>
+		<note>user(1)</note>
+		<from>/u/([0-9]+)</from>
+		<to>/userPage.shtml?uid=$1</to>
+	</rule>
+	<rule>
+		<note>user(2)</note>
+		<from>/userpage/(\.*)</from>
+		<to>/userPage.shtml?username=$1</to>
+	</rule>
+	<rule>
+		<note>user page</note>
+		<from>/([\w]+)/page/</from>
+		<to>/userPage.shtml?usernick=$1</to>
+	</rule>
+	<rule>
+		<note>user setting</note>
+		<from>/setting/</from>
+		<to>/userSetting.action?method=face</to>
+	</rule>
+	<rule>
+		<note>user register</note>
+		<from>/register</from>
+		<to>/userExt.do?method=regForm</to>
+	</rule>
+	<rule>
+		<note>user forget password</note>
+		<from>/forget-password</from>
+		<to>/userExt.do?method=forget</to>
+	</rule>
+
+
+	<!--=============== album ================-->
+
+	<rule>
+		<note>album photo</note>
+		<from>/album/photo/([0-9]+)</from>
+		<to>/img.shtml?method=imageView&amp;id=$1</to>
+	</rule>
+	<rule>
+		<note>album</note>
+		<from>/album/([0-9]+)</from>
+		<to>/img.shtml?method=galleryView&amp;id=$1</to>
+	</rule>
+	<rule>
+		<note>album home</note>
+		<from>/album/$</from>
+		<to>/img.shtml?method=galleryIndexPage</to>
+	</rule>
+
+
+	<!--=============== timeline ================-->
+
+	<rule>
+		<note>timeline</note>
+		<from>/timeline</from>
+		<to>/user.shtml?method=timelineProxy</to>
+	</rule>
+	
+
+	<!--=============== online ================-->
+
+	<rule>
+		<note>online</note>
+		<from>/online</from>
+		<to>/user.shtml?method=online</to>
+	</rule>
+	<rule>
+		<note>guests</note>
+		<from>/guests</from>
+		<to>/user.shtml?method=guests</to>
+	</rule>
+
+
+	<!--=============== message ================-->
+
+	<rule>
+		<note>messages</note>
+		<from>/messages</from>
+		<to>/message.action?method=list</to>
+	</rule>
+	<rule>
+		<note>notices</note>
+		<from>/notices</from>
+		<to>/notice.action?method=list</to>
+	</rule>
+	
+
+	<!--=============== dashboard ================-->
+	
+	<rule>
+		<note>dashboard</note>
+		<from>/dashboard</from>
+		<to>/index.shtml</to>
+	</rule>
+
+
+	<!--=============== share ================-->
+
+	<rule>
+		<note>share comment</note>
+		<from>/share/comment/([0-9]+)</from>
+		<to>/share.shtml?method=shareComments&amp;sid=$1</to>
+	</rule>
+	<rule>
+		<note>share</note>
+		<from>/share/([0-9]+)</from>
+		<to>/share.shtml?method=shares&amp;wrap-uid=$1</to>
+	</rule>
+	<rule>
+		<note>share home</note>
+		<from>/share/$</from>
+		<to>/share.shtml?method=shareIndexPage</to>
+	</rule>
+	
+
+	<!--=============== equipment ================-->
+
+	<rule>
+		<note>equipment shop with category</note>
+		<from>/equipment/shop/([0-9]+)/([0-9]+)</from>
+		<to>/shop.action?method=view&amp;id=$1&amp;categoryId=$2</to>
+	</rule>
+	<rule>
+		<note>equipment shop</note>
+		<from>/equipment/shop/([0-9]+)</from>
+		<to>/shop.action?method=view&amp;id=$1</to>
+	</rule>
+	<rule>
+		<note>equipment search</note>
+		<from>/equipment/search/([\w]+)</from>
+		<to>/equipmentSearch.action?method=search&amp;brand=$1</to>
+	</rule>
+	<rule>
+		<note>equipment</note>
+		<from>/equipment/([0-9]+)</from>
+		<to>/equipment.shtml?method=view&amp;wid=$1</to>
+	</rule>
+	<rule>
+		<note>equipment home</note>
+		<from>/equipment/$</from>
+		<to>/equipment.shtml?method=list&amp;type=hot</to>
+	</rule>
+
+
+	<!--=============== people ================-->
+
+	<rule>
+		<note>people home</note>
+		<from>/people/</from>
+		<to>/people.action?method=indexPage</to>
+	</rule>
+	<rule>
+		<note>people</note>
+		<from>/people/([0-9]+)</from>
+		<to>/people.action?method=view&amp;pid=$1</to>
+	</rule>
+	<rule>
+		<note>rss (share)</note>
+		<from>/([\w]+)/share/rss/</from>
+		<to>/rss.shtml?type=share&amp;usernick=$1&amp;wrap=false</to>
+	</rule>
+	
+
+	<!--=============== about ===============-->
+
+	<rule>
+		<note>about</note>
+		<from>/aboutus</from>
+		<to>/about/info.jsp</to>
+	</rule>
+	<rule>
+		<note>privacy</note>
+		<from>/privacy</from>
+		<to>/about/privacy.jsp</to>
+	</rule>
+	<rule>
+		<note>contact</note>
+		<from>/contact</from>
+		<to>/about/contact.jsp</to>
+	</rule>
+	<rule>
+		<note>link</note>
+		<from>/link</from>
+		<to>/about/link.jsp</to>
+	</rule>
+	<rule>
+		<note>media</note>
+		<from>/media</from>
+		<to>/about/media.jsp</to>
+	</rule>
+	<rule>
+		<note>partners</note>
+		<from>/partners</from>
+		<to>/about/partners.jsp</to>
+	</rule>
+	
+
+	<!--=============== app ===============-->
+
+	<rule>
+		<note>app homepage</note>
+		<from>/apps/$</from>
+		<to>/apps.action?method=doProcess</to>
+	</rule>
+	<rule>
+		<note>bank</note>
+		<from>/bank/$</from>
+		<to>/bank.action?method=indexPage</to>
+	</rule>
+	<rule>
+		<note>donate</note>
+		<from>/donate/$</from>
+		<to>/donate.action?method=indexPage</to>
+	</rule>
+
+
+	<!--=============== channel ===============-->
+	
+	<rule>
+		<note>dime</note>
+		<from>/channel/dimemag</from>
+		<to>/dimeMagPlugin.action?method=indexPage</to>
+	</rule>
+	<rule>
+		<note>hoop</note>
+		<from>/channel/hoop</from>
+		<to>/basketballPlugin.action?method=indexPage</to>
+	</rule>
+	<rule>
+		<note>hoop</note>
+		<from>/channel/badminton</from>
+		<to>/badmintonPlugin.action?method=indexPage</to>
+	</rule>
+	<rule>
+		<note>sneaker</note>
+		<from>/channel/sneaker</from>
+		<to>/sneaker.action?method=doProcess</to>
+	</rule>
+	<rule>
+		<note>notice count</note>
+		<from>/services/notice/</from>
+		<to>/notice.action?method=noticeCnt</to>
+	</rule>
+	
+
+	<!--=============== old url redirect ================-->
+	
+	<rule>
+		<note>blog entry redirect</note>
+		<from>/entry/([0-9]+)</from>
+		<to type="redirect">%{context-path}/blog/entry/$1</to>
+	</rule>
+	<rule>
+		<note>group topic redirect</note>
+		<from>/gt/([0-9]+)</from>
+		<to type="redirect">%{context-path}/group/topic/$1</to>
+	</rule>
+	<rule>
+		<note>group redirect</note>
+		<from>/g/([0-9]+)</from>
+		<to type="redirect">%{context-path}/group/$1</to>
+	</rule>
+	<rule>
+		<note>news entry redirect</note>
+		<from>/n/([0-9]+)</from>
+		<to type="redirect">%{context-path}/news/$1</to>
+	</rule>
+	<rule>
+		<note>topic redirect</note>
+		<from>/t/([0-9]+)</from>
+		<to type="redirect">%{context-path}/topic/$1</to>
+	</rule>
+	<rule>
+		<note>board redirect</note>
+		<from>/b/([0-9]+)</from>
+		<to type="redirect">%{context-path}/board/$1</to>
+	</rule>
+	<rule>
+		<note>albumn photo redirect</note>
+		<from>/albumn/photo/([0-9]+)</from>
+		<to type="redirect">%{context-path}/album/photo/$1</to>
+	</rule>
+	<rule>
+		<note>albumn redirect</note>
+		<from>/albumn/([0-9]+)</from>
+		<to type="redirect">%{context-path}/album/$1</to>
+	</rule>
+	<rule>
+		<note>albumn home redirect</note>
+		<from>/albumn/$</from>
+		<to type="redirect">%{context-path}/album/</to>
+	</rule>
+	<rule>
+		<note>gallery photo redirect</note>
+		<from>/gallery/photo/([0-9]+)</from>
+		<to type="redirect">%{context-path}/album/photo/$1</to>
+	</rule>
+	<rule>
+		<note>gallery redirect</note>
+		<from>/gallery/([0-9]+)</from>
+		<to type="redirect">%{context-path}/album/$1</to>
+	</rule>
+	<rule>
+		<note>gallery home redirect</note>
+		<from>/gallery/$</from>
+		<to type="redirect">%{context-path}/album/</to>
+	</rule>
+	<rule>
+		<note>subject topic redirect</note>
+		<from>/sub/article/([0-9]+)</from>
+		<to type="redirect">%{context-path}/subject/article/([0-9]+)</to>
+	</rule>
+	<rule>
+		<note>subject home redirect</note>
+		<from>/sub/home</from>
+		<to type="redirect">%{context-path}/subject/</to>
+	</rule>
+	<rule>
+		<note>subject list redirect</note>
+		<from>/sub/list</from>
+		<to type="redirect">%{context-path}/subject/list/([0-9]+)</to>
+	</rule>
+	<rule>
+		<note>subject redirect</note>
+		<from>/sub/([0-9]+)</from>
+		<to type="redirect">%{context-path}/subject/([0-9]+)</to>
+	</rule>
+	<rule>
+		<note>subject home redirect</note>
+		<from>/sub/</from>
+		<to type="redirect">%{context-path}/subject/</to>
+	</rule>
+	<rule>
+		<note>dime redirect</note>
+		<from>/apps/dimemag</from>
+		<to type="redirect">%{context-path}/channel/dimemag</to>
+	</rule>
+	<rule>
+		<note>hoop redirect</note>
+		<from>/apps/hoop</from>
+		<to type="redirect">%{context-path}/channel/hoop</to>
+	</rule>
+	<rule>
+		<note>badminton redirect</note>
+		<from>/apps/badminton</from>
+		<to type="redirect">%{context-path}/channel/badminton</to>
+	</rule>
+	<rule>
+		<note>group activity redirect</note>
+		<from>/activity/([0-9]+)</from>
+		<to type="redirect">%{context-path}/group/activity/([0-9]+)</to>
+	</rule>
+	<rule>
+		<note>group home redirect</note>
+		<from>/group/home</from>
+		<to type="redirect">%{context-path}/group/</to>
+	</rule>
+	<rule>
+		<note>news home redirect</note>
+		<from>/news/home</from>
+		<to type="redirect">%{context-path}/news/</to>
+	</rule>
+	<rule>
+		<note>subject topic redirect</note>
+		<from>/article/([0-9]+)</from>
+		<to type="redirect">%{context-path}/subject/article/([0-9]+)</to>
+	</rule>
+</urlrewrite>

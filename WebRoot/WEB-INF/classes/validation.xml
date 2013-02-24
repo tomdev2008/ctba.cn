@@ -1,0 +1,261 @@
+<!DOCTYPE form-validation PUBLIC
+          "-//Apache Software Foundation//DTD Commons Validator Rules Configuration 1.0//EN"
+          "http://jakarta.apache.org/commons/dtds/validator_1_0.dtd">
+
+<form-validation>
+
+	<global>
+		<constant>
+			<constant-name>number</constant-name>
+			<constant-value>^\d+$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>englishName</constant-name>
+			<constant-value>^[A-Z0-9a-z\s]+$</constant-value>
+		</constant>
+		<constant>
+			<constant-name>invalidCharacter</constant-name>
+			<constant-value><![CDATA[$%'*+:;<=>?@^_`{|}]]></constant-value>
+		</constant>
+		<constant>
+			<constant-name>invalidDiscussionCharacter</constant-name>
+			<constant-value><![CDATA[$%'*+;<=>?@^_`{|}]]></constant-value>
+		</constant>
+		<constant>
+			<constant-name>
+				validDiscussionCharacterReguler
+			</constant-name>
+			<constant-value><![CDATA[^[^${invalidCharacterForFilter}]*$]]></constant-value>
+		</constant>
+		<constant>
+			<constant-name>invalidBulletinBoardCharacter</constant-name>
+			<constant-value><![CDATA[$<>^`|]]></constant-value>
+		</constant>
+
+		<constant>
+			<constant-name>
+				validBulletinBoardCharacterReguler
+			</constant-name>
+			<constant-value><![CDATA[^[^${invalidBulletinBoardCharacter}]*$]]></constant-value>
+		</constant>
+
+		<constant>
+			<constant-name>invalidEmailCharacter</constant-name>
+			<constant-value><![CDATA[$%'*+:;<=>?^_`{|}]]></constant-value>
+		</constant>
+
+		<constant>
+			<constant-name>validCharacterReguler</constant-name>
+			<constant-value><![CDATA[^[^${invalidCharacter}]*$]]></constant-value>
+		</constant>
+
+		<constant>
+			<constant-name>validEmail</constant-name>
+			<constant-value><![CDATA[^[^${invalidEmailCharacter}]*$]]></constant-value>
+		</constant>
+
+		<constant>
+			<constant-name>defaultDateFormat</constant-name>
+			<constant-value><![CDATA[MM/dd/yyyy]]></constant-value>
+		</constant>
+
+		<constant>
+			<constant-name>invalidCharacterForFilter</constant-name>
+			<constant-value><![CDATA[$%'*:'<=>^`{|}]]></constant-value>
+		</constant>
+
+		<constant>
+			<constant-name>
+				validCharacterRegulerForFilter
+			</constant-name>
+			<constant-value><![CDATA[^[^${invalidCharacterForFilter}]*$]]></constant-value>
+		</constant>
+
+		<validator name="required"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateRequired"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			msg="errors.required" />
+
+		<validator name="int"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateInt"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			msg="errors.int" />
+
+		<validator name="email"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateEmail"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			msg="" />
+
+		<validator name="minlength"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateMinLength"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.minlength">
+
+		</validator>
+
+		<validator name="maxlength"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateMaxLength"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.maxlength">
+		</validator>
+
+
+		<validator name="mask"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateMask"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.invalid">
+		</validator>
+
+		<validator name="byte"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateByte"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.byte" jsFunctionName="ByteValidations">
+		</validator>
+
+		<validator name="short"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateShort"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.short" jsFunctionName="ShortValidations">
+		</validator>
+
+		<validator name="integer"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateInteger"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.integer"
+			jsFunctionName="IntegerValidations">
+		</validator>
+
+		<validator name="long"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateLong"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.long" />
+
+		<validator name="float"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateFloat"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.float">
+		</validator>
+
+		<validator name="double"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateDouble"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.double" />
+
+		<validator name="date"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateDate"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="" msg="errors.date">
+		</validator>
+
+		<validator name="intRange"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateIntRange"
+			methodParams="java.lang.Object,org.apache.commons.validator.Field"
+			depends="integer" msg="errors.range">
+		</validator>
+
+		<validator name="floatRange"
+			classname="org.net9.core.validator.SimpleValidator"
+			method="validateFloatRange"
+			methodParams="java.lang.Object,
+                       org.apache.commons.validator.Field"
+			depends="float" msg="errors.range">
+		</validator>
+
+	</global>
+
+	<formset>
+
+		<form name="messageBean">
+			<field property="msgContent" depends="required">
+				<arg0 key="page.message.error.content" />
+			</field>
+			<field property="msgTitle" depends="required">
+				<arg0 key="page.message.error.title" />
+			</field>
+			<field property="msgTo" depends="required" />
+		</form>
+
+		<form name="topicBean">
+			<field property="topicContent"
+				depends="required,maxlength">
+				<arg0 key="page.board.topic.form.error.content" />
+				<!-- arg1 name="maxlength" key="${var:maxlength}"
+					resource="false" /> -->
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>100000</var-value>
+				</var>
+			</field>
+			<field property="topicTitle" depends="required,maxlength">
+				<arg0 key="page.board.topic.form.error.title" />
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>50</var-value>
+				</var>
+			</field>
+		</form>
+
+		<form name="userBean">
+			<field property="userName" depends="required">
+				<arg0 key="nameForm.username.displayname" />
+			</field>
+			<field property="userScore" depends="required,int">
+				<arg0 key="nameForm.age.displayname" />
+			</field>
+		</form>
+
+		<form name="mainUserBean">
+			<field property="qq" depends="mask">
+				<arg0 key="page.setting.info.error.qq" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>[0-9]{3,12}</var-value>
+				</var>
+			</field>
+		</form>
+
+		<!-- 注意，这里不验证required -->
+
+		<form name="globalBean">
+			<field property="regUsername" depends="mask,maxlength">
+				<arg0 key="page.user.reg.log.username" />
+				<var>
+					<var-name>mask</var-name>
+					<var-value>^[\w\u4e00-\u9fa5_a-zA-Z][\w\u4e00-\u9fa5_a-zA-Z0-9]{1,19}$</var-value>
+				</var>
+				<var>
+					<var-name>maxlength</var-name>
+					<var-value>20</var-value>
+				</var>
+			</field>
+
+			<field property="regPassword" depends="minlength">
+				<arg0 key="page.board.topic.form.error.title" />
+				<var>
+					<var-name>minlength</var-name>
+					<var-value>6</var-value>
+				</var>
+			</field>
+
+			<field property="email" depends="email">
+				<arg0 key="page.user.reg.log.email" />
+			</field>
+		</form>
+
+	</formset>
+
+</form-validation>

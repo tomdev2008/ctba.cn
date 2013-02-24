@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowViewLayout Version="1.2">
+  <StrutsActivity path="/group.do" location="1364,0" dimension="306,104" />
+  <StrutsActivity path="/activity.do" location="190,764" dimension="309,104" />
+  <StrutsActivity path="/group/noticeList.jsp" location="0,314" dimension="152,53" />
+  <StrutsActivity path="/group/groupFrame.jsp" location="252,314" dimension="170,53" />
+  <StrutsActivity path="/group/memberForm.jsp" location="522,314" dimension="177,53" />
+  <StrutsActivity path="/group/myGroups.jsp" location="799,314" dimension="158,53" />
+  <StrutsActivity path="/group/noticeForm.jsp" location="1306,314" dimension="163,53" />
+  <StrutsActivity path="/group/joinGroup.jsp" location="1569,314" dimension="156,53" />
+  <StrutsActivity path="/group/indexPage.jsp" location="2082,314" dimension="158,53" />
+  <StrutsActivity path="/group/leaveGroup.jsp" location="2600,314" dimension="165,53" />
+  <StrutsActivity path="/group/noticeView.jsp" location="2865,314" dimension="160,53" />
+  <StrutsActivity path="/group/activityForm.jsp" location="0,968" dimension="167,53" />
+  <StrutsActivity path="/group/activityList.jsp" location="267,968" dimension="156,53" />
+  <StrutsActivity path="/group/activityView.jsp" location="523,968" dimension="164,53" />
+  <StrutsActivity path="/gallery/galleryView.jsp" location="350,550" dimension="167,53" />
+  <StrutsActivity path="/gallery/faceList.jsp" location="50,450" dimension="124,49" />
+  <StrutsActivity path="/gallery/galleryForm.jsp" location="650,550" dimension="170,53" />
+  <StrutsActivity path="/gallery/miniList.jsp" location="950,1050" dimension="121,49" />
+  <StrutsActivity path="/group/imgForm.jsp" location="993,666" dimension="150,53" />
+  <StrutsActivity path="/gallery/imgView.jsp" location="650,850" dimension="150,53" />
+  <StrutsActivity path="/gallery/galleryList.jsp" location="950,550" dimension="159,53" />
+  <StrutsActivity path="/group/imgList.jsp" location="1513,666" dimension="139,53" />
+  <StrutsActivity path="/group/imgView.jsp" location="1243,666" dimension="147,53" />
+  <StrutsActivity path="/user/galleryView.jsp" location="0,666" dimension="153,53" />
+  <StrutsActivity path="/user/galleryForm.jsp" location="253,666" dimension="156,53" />
+  <StrutsActivity path="/user/imgForm.jsp" location="509,666" dimension="139,53" />
+  <StrutsActivity path="/user/galleryList.jsp" location="748,666" dimension="145,53" />
+  <StrutsActivity path="/group/shareList.jsp" location="1057,314" dimension="149,53" />
+  <StrutsActivity path="/group/shareView.jsp" location="1825,314" dimension="157,53" />
+  <StrutsActivity path="/group/shareForm.jsp" location="2340,314" dimension="160,53" />
+  <StrutsTransition id="/group.do,group.invite,/group/memberForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1428,104" />
+      <AbsolutePoint location="1428,194" />
+      <AbsolutePoint location="610,194" />
+      <AbsolutePoint location="610,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,group.leave,/group/leaveGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1632,104" />
+      <AbsolutePoint location="1632,164" />
+      <AbsolutePoint location="2682,164" />
+      <AbsolutePoint location="2682,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/activity.do,act.view,/group/activityView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="448,868" />
+      <AbsolutePoint location="448,918" />
+      <AbsolutePoint location="605,918" />
+      <AbsolutePoint location="605,968" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,group.join,/group/joinGroup.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1530,104" />
+      <AbsolutePoint location="1530,284" />
+      <AbsolutePoint location="1647,284" />
+      <AbsolutePoint location="1647,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,notice.view,/group/noticeView.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1657,104" />
+      <AbsolutePoint location="1657,134" />
+      <AbsolutePoint location="2945,134" />
+      <AbsolutePoint location="2945,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,group.index,/group/indexPage.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1581,104" />
+      <AbsolutePoint location="1581,224" />
+      <AbsolutePoint location="2161,224" />
+      <AbsolutePoint location="2161,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,notice.list,/group/noticeList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1377,104" />
+      <AbsolutePoint location="1377,134" />
+      <AbsolutePoint location="76,134" />
+      <AbsolutePoint location="76,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/activity.do,act.form,/group/activityForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="242,868" />
+      <AbsolutePoint location="242,918" />
+      <AbsolutePoint location="83,918" />
+      <AbsolutePoint location="83,968" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/activity.do,act.list,/group/activityList.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="345,868" />
+      <AbsolutePoint location="345,968" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,notice.form,/group/noticeForm.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1504,104" />
+      <AbsolutePoint location="1504,284" />
+      <AbsolutePoint location="1387,284" />
+      <AbsolutePoint location="1387,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,group.list.simple,/group/groupFrame.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1402,104" />
+      <AbsolutePoint location="1402,164" />
+      <AbsolutePoint location="337,164" />
+      <AbsolutePoint location="337,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+  <StrutsTransition id="/group.do,group.mine,/group/myGroups.jsp,1" routingType="0">
+    <AutomaticBendpoints>
+      <AbsolutePoint location="1453,104" />
+      <AbsolutePoint location="1453,224" />
+      <AbsolutePoint location="878,224" />
+      <AbsolutePoint location="878,314" />
+    </AutomaticBendpoints>
+  </StrutsTransition>
+</FlowViewLayout>
+

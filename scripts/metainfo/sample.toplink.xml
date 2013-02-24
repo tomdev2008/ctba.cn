@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence
+    http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"
+	version="1.0">
+
+	<!-- transaction-type 可选值有: JTA、RESOURCE_LOCAL ;
+		在Java EE 环境下默认值为JTA, 在Java SE 环境下默认值为RESOURCE_LOCAL;
+		如果值为JTA的话， 则必须要指定<jta-data-source>的值 -->
+
+	<persistence-unit name="blog" transaction-type="RESOURCE_LOCAL">
+		<description>这是piscesPU持久化单元的一个简单描述</description>
+
+		<!-- 指明javax.persistence.spi.PersistenceProvider 的实现类, 一般来说该节点可以省略 -->
+		<!-- provider>oracle.toplink.essentials.PersistenceProvider</provider -->
+		<!-- 在Java SE环境下必须定义所有的实体Entity类, 也可以用 <mapping-file> 或<jar-file> 节点代替 -->
+		<!-- <provider>
+			oracle.toplink.essentials.PersistenceProvider
+			</provider>
+		-->
+		<!--<exclude-unlisted-classes>false</exclude-unlisted-classes>
+		-->
+
+		<provider>
+			oracle.toplink.essentials.ejb.cmp3.EntityManagerFactoryProvider
+		</provider>
+		<class>org.net9.blog.model.jpa.BlogAttachment</class>
+		<class>org.net9.blog.model.jpa.BlogUser</class>
+		<class>org.net9.blog.model.jpa.BlogEntry</class>
+		<class>org.net9.blog.model.jpa.Blog</class>
+		<class>org.net9.blog.model.jpa.BlogTag</class>
+		<class>org.net9.blog.model.jpa.BlogTheme</class>
+		<class>org.net9.blog.model.jpa.BlogComment</class>
+		<class>org.net9.blog.model.jpa.BlogCategory</class>
+		<class>org.net9.blog.model.jpa.BlogLink</class>
+		<class>org.net9.blog.model.jpa.MainUser</class>
+		<class>org.net9.blog.model.jpa.GroupUser</class>
+		<class>org.net9.blog.model.jpa.GroupModel</class>
+		<class>org.net9.blog.model.jpa.GroupTopic</class>
+		<class>org.net9.blog.model.jpa.ImageModel</class>
+		<class>org.net9.blog.model.jpa.GroupNotice</class>
+		<class>org.net9.blog.model.jpa.GroupShare</class>
+		<!--
+			//可以定义jndi资源代替properties节点中的数据库配置,
+			//但是在调用Persistence.createEntityManagerFactory方法前必须保证此资源已经注入程序中.
+			<jta-data-source>jdbc/persist</jta-data-source>
+		-->
+		<!-- properties节点是用来定义各种JPA实现包所定义的属性配置 -->
+		<!-- 下面列举的是toplink实现包中可以配置的部分属性 -->
+		<properties>
+			<!-- 数据库连接配置, JDBC驱动 -->
+			<property name="toplink.jdbc.driver"
+				value="com.mysql.jdbc.Driver" />
+			<!-- 数据库连接配置,URL -->
+			<property name="toplink.jdbc.url"
+				value="jdbc:mysql://localhost/glr_community_new" />
+			<!-- 数据库连接配置, 用户名 -->
+			<property name="toplink.jdbc.user" value="glr_community" />
+			<!-- 数据库连接配置, 密码 -->
+			<property name="toplink.jdbc.password"
+				value="glr_community" />
+
+			<!-- 数据库连接池配置, 可写的连接池的最大连接数, 默认为 10 -->
+			<property name="toplink.jdbc.write-connections.max"
+				value="10" />
+			<!-- 数据库连接池配置, 可写的连接池的最大连接数, 默认为 5 -->
+			<property name="toplink.jdbc.write-connections.min"
+				value="5" />
+			<!-- 数据库连接池配置, 只读的连接池的最大连接数, 默认为 2 -->
+			<property name="toplink.jdbc.read-connections.max"
+				value="2" />
+			<!-- 数据库连接池配置, 只读的连接池的最大连接数, 默认为 2 -->
+			<property name="toplink.jdbc.read-connections.min"
+				value="2" />
+			<!-- 数据库连接池配置, 只读的连接池是否可以共享, 默认为 false -->
+			<property name="toplink.jdbc.read-connections.shared"
+				value="false" />
+			<!-- 是否绑定所有jdbc属性, 默认为 true -->
+			<property name="toplink.jdbc.bind-parameters" value="true" />
+
+			<!-- 缓冲配置, 以下三个属性值为默认设置;
+				可以 default改为entity名(@Entity注释中的name属性值)或者类名来指定该entity的缓冲配置, 如:
+			-->
+			<property
+				name="toplink.cache.size.org.pisces.persist.UserInfo" value="2" />
+			<!-- 缓冲配置, 缓冲大小, 默认为 1000 -->
+			<property name="toplink.cache.size.default" value="1000" />
+			<!-- 缓冲配置, 缓冲类型, 可选值为{ Weak、SoftWeak、HardWeak、Full、NONE }, 不区分大小, 默认为 SoftWeak -->
+			<property name="toplink.cache.type.default"
+				value="SoftWeak" />
+			<!-- 缓冲配置, 是否共享缓冲, 默认为 false -->
+			<property name="toplink.cache.shared.default" value="false" />
+
+			<!-- 日志配置, 日志级别, 默认值为java.util.logging.Level在系统中的值 -->
+			<property name="toplink.logging.level" value="SEVERE" />
+			<!-- 日志配置, 日志是否记录当前时间, 默认为 true -->
+			<property name="toplink.logging.timestamp" value="true" />
+			<!-- 日志配置, 日志是否记录当前线程名, 默认为 true -->
+			<property name="toplink.logging.thread" value="true" />
+			<!-- 日志配置, 日志是否记录当前会话名, 默认为 true -->
+			<property name="toplink.logging.session" value="true" />
+			<!-- 日志配置, 日志是否记录异常堆栈, 默认为 true -->
+			<property name="toplink.logging.exceptions" value="true" />
+
+			<!-- 目标数据库类型, 截至目前为止可选值为{ Auto、Oracle、Attunity、Cloudscape、Database、DB2、DB2Mainframe
+				、 DBase、Derby、HSQL、Informix、JavaDB、MySQL4、PostgreSQL、SQLAnyWhere、 SQLServer、Sybase、TimesTen },
+				不区分大小, 默认为 Auto, 即 TopLink自动匹配对应的数据库类型 -->
+			<property name="toplink.target-database" value="Auto" />
+
+			<!-- 指定会话名称, 默认为系统自动产生唯一性名称-->
+			<property name="toplink.session-name"
+				value="pisces_session_name" />
+
+			<!-- 设置是否为weaving, 默认为 false?true? -->
+			<property name="toplink.weaving" value="false" />
+
+			<!-- 指定目标应用服务器类型, 截至目前为止可选值为{ None、OC4J_10_1_3、SunAS9 }(以后可能会扩展其他值的),
+				在 Java SE环境下值为 None, 不区分大小, 默认为 None -->
+			<property name="toplink.target-server" value="None" />
+
+			<!-- 指定实现 oracle.toplink.essentials.tools.sessionconfiguration.DescriptorCustomizer 的类名,
+				toplink.descriptor.customizer.  为前缀， 后面跟entity名(@Entity注释中的name属性值)或者entity类名,
+				该类中的customize方法在执行 了所有的属性(除了 toplink.session.customizer 之外)后运行, 如:
+				<property name="toplink.descriptor.customizer.org.pisces.persist.UserInfo" value="org.pisces.persist.SimpleDescriptorCustomizer"/>
+				<property name="toplink.descriptor.customizer.org.pisces.persist.Address" value="org.pisces.persist.SimpleDescriptorCustomizer"/>
+			-->
+
+			<!-- 指定实现 oracle.toplink.essentials.tools.sessionconfiguration.SessionCustomizer 的类名,
+				该类中的customize方法在执行了所有的属性后运行, 如:
+				<property name="toplink.session.customizer" value="org.pisces.persist.SimpleSessionCustomizer"/>
+			-->
+		</properties>
+	</persistence-unit>
+
+</persistence>

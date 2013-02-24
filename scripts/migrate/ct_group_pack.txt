@@ -1,0 +1,52 @@
+CREATE TABLE `j2bb_ctba_new`.`group_activity` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(85) NOT NULL,
+  `group_id` INTEGER UNSIGNED NOT NULL,
+  `title` VARCHAR(145) NOT NULL,
+  `content` TEXT NOT NULL,
+  `startTime` VARCHAR(45) NOT NULL,
+  `endTime` VARCHAR(45) NOT NULL,
+  `place` TEXT NOT NULL,
+  `type` INTEGER UNSIGNED NOT NULL DEFAULT 0,
+  `privateState` INTEGER UNSIGNED NOT NULL DEFAULT 0,
+  `pic` VARCHAR(145),
+  `updateTime` VARCHAR(45),
+  `hits` INTEGER UNSIGNED NOT NULL DEFAULT 0,
+  `recommendIndex` INTEGER UNSIGNED DEFAULT 0,
+  `tag` VARCHAR(145),
+  `createTime` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FK_group_activity_1` FOREIGN KEY `FK_group_activity_1` (`group_id`)
+    REFERENCES `group_model` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+)
+ENGINE = InnoDB;
+
+
+CREATE TABLE `j2bb_ctba_new`.`group_activity_user` (
+  `id` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+  `username` VARCHAR(145) NOT NULL,
+  `activity_id` INTEGER UNSIGNED NOT NULL,
+  `role` INTEGER UNSIGNED NOT NULL DEFAULT 0,
+  PRIMARY KEY (`id`),
+  CONSTRAINT `FK_group_activity_user_1` FOREIGN KEY `FK_group_activity_user_1` (`username`)
+    REFERENCES `main_user` (`username`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `FK_group_activity_user_2` FOREIGN KEY `FK_group_activity_user_2` (`activity_id`)
+    REFERENCES `group_activity` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+)
+ENGINE = InnoDB;
+
+ALTER TABLE `j2bb_ctba_new`.`group_activity` ADD CONSTRAINT `FK_group_activity_2` FOREIGN KEY `FK_group_activity_2` (`username`)
+    REFERENCES `main_user` (`username`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE;
+
+
+ALTER TABLE `j2bb_ctba_new`.`group_topic` ADD COLUMN `hits` INTEGER UNSIGNED DEFAULT 0 AFTER `badHits`;
+
+update group_topic  set title=substring(content,1,15) where title='_'

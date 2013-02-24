@@ -1,0 +1,3 @@
+@echo off
+echo Compile source and start server...
+ant -f ../../build.xml compile && start.bat
